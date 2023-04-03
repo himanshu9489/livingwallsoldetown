@@ -1,0 +1,9 @@
+.blue-print-plan-text-header {
+    display: block;
+}
+
+@media screen and (min-width: 992px) {
+    .blue-print-plan-text-header {
+        display: none
+    }
+}
