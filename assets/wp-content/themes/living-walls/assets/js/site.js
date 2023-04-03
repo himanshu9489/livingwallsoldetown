@@ -106,10 +106,3 @@ jQuery(".db-phone .wpcf7-tel").keyup(function (e) {
     this.value = this.value.replace(/\D/g, "");
   }
 });
-
-let pdfbutton = document.getElementById("pdf-download");
-console.log(pdfbutton);
-
-const onClickHandler = () => {
-  pdfbutton.click();
-};
