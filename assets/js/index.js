@@ -183,7 +183,7 @@ window.addEventListener(
 window.addEventListener(
   "load",
   (event) => {
-    $(".clicker").click(function () {
+    jQuery(".clicker").click(function () {
       if ($(this).hasClass("open")) {
         $(this).removeClass("open");
         $(this).find(".containerDivMain").slideUp(400);
@@ -253,7 +253,7 @@ function openApi(event, on) {
       name:
         document.getElementById("Name")?.value ||
         document.getElementById("name")?.value,
-      projectId: 103,
+      projectId: 24,
       ...(utm_campaign != null && { campaignCode: utm_campaign }),
       requireOtp: isOtp != undefined ? isOtp : false,
       email:
