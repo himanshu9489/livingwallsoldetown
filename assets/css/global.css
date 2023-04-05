@@ -46,6 +46,7 @@ body {
 
 #readLess2 {
     display: none;
+    color: #FFFFFF;
 }
 
 .buttonDiv {
@@ -89,7 +90,7 @@ body {
 }
 
 .navImg {
-    height: 48px;
+    height: 80px;
 }
 
 .navbarButton {
@@ -709,13 +710,12 @@ td {
 
 .modal {
     border-radius: 36px;
-    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     width: min-content;
     height: min-content;
     gap: 20px;
-    box-shadow: 7px 7px 7px #72B1F04D;
+    box-shadow: 7px 7px 7px #00000026;
     position: relative;
 }
 
@@ -726,16 +726,19 @@ td {
     align-items: center;
     padding: 60px 40px 20px 40px;
 }
+.innerModalHeader {
+    padding-bottom: 32px;
+    border-bottom: 1px solid #929496;
+}
 
 .modalMain {
     border-radius: 36px;
-    background-color: #F1F0F0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 40px 70px 40px 70px;
+    padding: 0px 70px 40px 70px;
 }
 
 .modalMain Img:not(.hashIcon) {
@@ -800,7 +803,7 @@ button:not(.location button) {
 }
 
 .modalMain button {
-    background-color: #f2840d;
+    background-color: #D75E35;
     color: #FFFFFF;
 }
 
@@ -925,8 +928,7 @@ button {
 .modalContainer {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border-radius: 80px;
+    background-color: #303538;
 }
 
 .modalMain {
@@ -975,9 +977,7 @@ button {
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #B5B5B5;
-    border-top-right-radius: 100px;
-    border-top-left-radius: 100px;
+    background-color: #303538;
     gap: 80px;
     padding: 80px;
 
@@ -992,7 +992,7 @@ button {
 }
 
 .enquiryMain button {
-    background-color: #f2840d;
+    background-color: #D75E35;
     color: #FFFFFF;
     width: 280px !important;
     align-self: center;
@@ -1007,7 +1007,7 @@ button {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
@@ -1036,10 +1036,12 @@ input[type='checkbox'] {
     border: 1px solid #FFD358;
     font-size: 10px;
     transform: scale(1.3);
+    margin-top: 6px;
 }
 
 .checkboxWrapper p {
     margin: 0px;
+    color: white;
 }
 
 .checkboxWrapper span:last-of-type {
@@ -1055,7 +1057,9 @@ input[type='checkbox'] {
 
 .section5Header .headerText {
     padding-left: 4px;
-    font-family: 'Arvo' !important;
+    color: white;
+        font-size: 26px !important;
+        font-family: 'Arial' !important;
 }
 
 .enquiry .section5Header,
@@ -1257,7 +1261,7 @@ input[type='checkbox'] {
     display: none;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 36px;
     padding: 40px 40px 40px 40px;
 }
 
@@ -1272,6 +1276,7 @@ input[type='checkbox'] {
 
 .otpVerification .boxWrapper p {
     margin: 0px;
+    color: #FFFFFF;
 }
 
 .otpVerification .boxWrapper p:last-of-type {
@@ -1301,7 +1306,7 @@ input[type='checkbox'] {
 }
 
 .changeLink {
-    color: #298EC7;
+    color: #29a2c7;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -1323,7 +1328,7 @@ input[type='checkbox'] {
 
 .otpVerification button,
 .location button {
-    background-color: #f2840d;
+    background-color: #D75E35;
     color: #FFFFFF;
 }
 
@@ -1375,6 +1380,7 @@ input[type='checkbox'] {
 
 .location p {
     margin: 0px;
+    color: #FFFFFF;
 }
 
 .location button {
@@ -1394,6 +1400,16 @@ input[type='checkbox'] {
 
 .loading {
     display: none;
+}
+.numberText,
+.numberText1 {
+    color: #FFFFFF;
+}
+
+.get-call1 {
+    margin-top: 0;
+    padding-left: 0;
+    margin-bottom: 28px;
 }
 
 @media (max-width: 768px) {
@@ -1637,8 +1653,6 @@ input[type='checkbox'] {
     .enquiry {
         padding: 30px !important;
         gap: 30px !important;
-        border-top-right-radius: 36px !important;
-        border-top-left-radius: 36px !important;
         align-items: center;
     }
 
@@ -1994,14 +2008,16 @@ input[type='checkbox'] {
         border-radius: 50px !important;
     }
 
-    .modalMain,
-    .modalHeader {
-        padding: 40px 20px 40px 20px;
+   .modalHeader {
+    padding: 48px 20px 20px 20px;
+    }
+    
+    .modalMain {
+        padding: 0px 20px 40px 20px;
     }
 
     input[type='checkbox'] {
         transform: scale(1) !important;
-        margin: 0px !important;
         padding-bottom: 4px !important;
     }
 

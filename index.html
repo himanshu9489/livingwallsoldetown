@@ -538,7 +538,8 @@
   <script src="assets/js/index.js" id="index-js"></script>
   <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script defer src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/js/intlTelInput.min.js"></script>
-  <link rel="stylesheet" href="assets/css/global.css">
+  <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="assets/css/global.css" />
   <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css" />
   <!--  -->
   <!--  -->
@@ -608,8 +609,7 @@
       </filter>
     </defs>
   </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-    style="
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
         visibility: hidden;
         position: absolute;
         left: -9999px;
@@ -629,8 +629,7 @@
       </filter>
     </defs>
   </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-    style="
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
         visibility: hidden;
         position: absolute;
         left: -9999px;
@@ -650,8 +649,7 @@
       </filter>
     </defs>
   </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-    style="
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
         visibility: hidden;
         position: absolute;
         left: -9999px;
@@ -671,8 +669,7 @@
       </filter>
     </defs>
   </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-    style="
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
         visibility: hidden;
         position: absolute;
         left: -9999px;
@@ -692,8 +689,7 @@
       </filter>
     </defs>
   </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-    style="
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
         visibility: hidden;
         position: absolute;
         left: -9999px;
@@ -713,8 +709,7 @@
       </filter>
     </defs>
   </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-    style="
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
         visibility: hidden;
         position: absolute;
         left: -9999px;
@@ -734,8 +729,7 @@
       </filter>
     </defs>
   </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none"
-    style="
+  <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="
         visibility: hidden;
         position: absolute;
         left: -9999px;
@@ -759,28 +753,24 @@
     <img class="closeIcon" src="assets/images/modalIcons/closeIcon.svg" onclick="closeModal()" alt="closeIcon"
       loading="lazy" height="auto" width="auto" />
     <div class="modalContainer">
-      <div class="modalHeader">
-        <!-- <img src="assets/images/navbarIcons/developerIcon.svg" class="navImg" alt="developerIcon" loading="lazy"
-                    height="auto" width="auto" /> -->
-        <img src="assets/images/LivingwallsLogoDark-1.svg" class="navImg" alt="developerIcon" loading="lazy" height="auto"
-          width="auto" />
-        <!-- <img src="assets/images/navbarIcons/propertyIcon.svg" class="navImg" alt="propertyIcon" loading="lazy"
-                  height="auto" width="auto" /> -->
+      <div class="modalHeader" id="modalHeader">
+        <div class="innerModalHeader">
+          <img src="assets/images/logo/project_logo@2x.png" class="navImg" alt="developerIcon" loading="lazy" height="auto"
+            width="auto" />
+        </div>
       </div>
       <form class="modalMain enquirySubMain" id="enquirySubMain" onsubmit="return false">
         <div class="section5Header">
-          <!-- <img src="assets/images/hashIcon.webp" class="hashIcon" alt="hashIcon" loading="lazy" height="auto" width="auto" /> -->
           <p class="headerText">
             <span>GET IN TOUCH</span>
-            <!-- <span>YOUR SLOT NOW</span> -->
           </p>
         </div>
-        <input type="text" name="name" placeholder="Name" id="Name" required class="input" style="padding: 20px;" />
+        <input type="text" name="name" placeholder="Name" id="Name" required class="input" style="padding: 20px" />
         <input type="tel" onclick="this.setSelectionRange(0, this.value.length)" name="phone" id="phoneNumber"
           placeholder="Mobile Number" maxlength="10" required class="inputPhone" />
         <input type="email" name="email" placeholder="Email Address" id="Email" required class="input"
-          style="padding: 20px;" />
-        <div class=" boxWrapper">
+          style="padding: 20px" />
+        <div class="boxWrapper">
           <div class="checkboxWrapper">
             <input type="checkbox" checked="checked" title="checkbox" />
             <span class="checkmark"></span>
@@ -807,16 +797,14 @@
         </button>
         <div id="error"></div>
       </form>
-      <form class="modal otpVerification" id="otpVerification" onsubmit="return false">
-        <img class="closeIcon" src="assets/images/modalIcons/closeIcon.svg" onclick="closeModal()" alt="closeIcon"
-          loading="lazy" height="auto" width="auto" />
+      <form class="otpVerification" id="otpVerification" onsubmit="return false">
         <div class="section5Header">
           <p class="headerText">
             <span>Verification Code</span>
           </p>
         </div>
         <div class="resendText">
-          <span id="numberText">Please Enter the Verification Code sent to</span>
+          <span class="numberText" id="numberText">Please Enter the Verification Code sent to</span>
           <span class="changeLink" onclick="backMain(event, true)">Change</span>
         </div>
         <div class="inutContainer">
@@ -837,9 +825,7 @@
         </button>
         <div id="error"></div>
       </form>
-      <div class="modal location" id="location" onsubmit="return false">
-        <img class="closeIcon" src="assets/images/modalIcons/closeIcon.svg" onclick="closeModal()" alt="closeIcon"
-          loading="lazy" height="auto" width="auto" />
+      <div class="location" id="location" onsubmit="return false">
         <div class="locationSection">
           <div class="headerModal">
             <lottie-player title="marker" background="transparent" src="assets/marker-lottie.json" speed="1"
@@ -880,7 +866,9 @@
             <div class="row">
               <div class="col-lg-10 col-md-10 col-12">
                 <div class="project-banner-content white-banner">
-                  <h1 style="font-family: 'Hero New Regular',sans-serif;">Olde Town</h1>
+                  <h1 style="font-family: 'Hero New Regular', sans-serif">
+                    Olde Town
+                  </h1>
                   <div class="project-description">
                     <p>Deliberately Modern 3BHK Flats in Jayamahal.</p>
                   </div>
@@ -899,94 +887,8 @@
           </div>
         </div>
       </section>
-      <!-- get in touch form -->
-      <!-- <section class="getintouch">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="contact-form-main-wrapper">
-                  <h2>Get in touch</h2>
-                  <div class="get-form">
-                  <div class="wpcf7 no-js" id="wpcf7-f6-o1" lang="en-US" dir="ltr">
-                    <div class="screen-reader-response">
-                      <p role="status" aria-live="polite" aria-atomic="true"></p>
-                      <ul></ul>
-                    </div>
-                    <form class="" id="form" onsubmit="return false">
-                    <div class="row form-grid">
-                        <div class="form-item">
-                          <div class="form-group">
-                            <p>
-                              <span class="wpcf7-form-control-wrap" data-name="gt-name">
-                                <input size="40"
-                                  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control border-right-lg-none"
-                                  aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text"
-                                  name="gt-name" id="name_1" />
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="form-item phonewidcode">
-                          <div class="form-group">
-                            <p>
-                              <span class="wpcf7-form-control-wrap gt-phone">
-                                <input size="40"
-                                  class="wpcf7-form-control wpcf7-text wpcf7-phonetext wpcf7-validates-as-required form-control border-right-lg-none"
-                                  data-numberonly="true" aria-required="true" aria-invalid="false"
-                                  placeholder="Phone Number" value="" type="text" name="gt-phone" id="phone_1" />
-                                  <input type="hidden"
-                                  name="gt-phone-country-code" class="wpcf7-phonetext-country-code" />
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="form-item">
-                          <div class="form-group">
-                            <p>
-                              <span class="wpcf7-form-control-wrap" data-name="budget">
-                                <select
-                                  class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control border-right-lg-none"
-                                  aria-required="true" aria-invalid="false" name="budget" id="budget_1">
-                                  <option value="Budget">Budget</option>
-                                  <option value="4.0 Crore">4.0 Crore</option>
-                                  <option value="4.5 Crore">4.5 Crore</option>
-                                  <option value="7.0 Crore">7.0 Crore</option>
-                                </select>
-                                </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="form-item">
-                          <div class="form-group mb-0">
-                            <p>
-                              <button type="submit" class="submit-btn btn" onclick="onClickHandler()">
-                                Submit
-                              </button>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="wpcf7-response-output" style="display: none;" aria-hidden="true"></div>
-                    </form>
-                  </div>
-                </div>
-                <div class="get-call">
-                  Call us on
-                  <a href="#">+91 96633 96979</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- <section>
-                                            <div class="get-call">
-                                              Call us on
-                                              <a href="#">+91 96633 96979</a>
-                                            </div>
-                                          </section> -->
       <!-- banner in container -->
-      <section class="banner-container heading-white" style="margin-top: 100px;">
+      <section class="banner-container heading-white" style="margin-top: 100px">
         <div class="container">
           <div class="banner-container-heading">
             <div class="heading-content">
@@ -1172,7 +1074,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="col-lg-4 col-md-5">
                 <div class="colored-text">
                   Recapture the charm of living in an independent house with a
@@ -1305,7 +1206,7 @@
           </div>
         </div>
       </section>
-      <!-- get in touch form -->
+      <!-- download pdf form -->
       <section class="download-brochure">
         <div class="container">
           <div class="row">
@@ -1329,55 +1230,8 @@
                           <p role="status" aria-live="polite" aria-atomic="true"></p>
                           <ul></ul>
                         </div>
-                        <!-- download pdf form -->
-                        <!-- <form onsubmit="return false" class="" aria-label="Contact form">
-                        <div style="display: none">
-                          <input type="hidden" name="_wpcf7" value="244" />
-                          <input type="hidden" name="_wpcf7_version" value="5.7.5.1" />
-                          <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                          <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f244-o2" />
-                          <input type="hidden" name="_wpcf7_container_post" value="0" />
-                          <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                        </div>
-                        <div class="row form-grid">
-                            <div class="form-item">
-                              <div class="form-group">
-                                <p>
-                                  <span class="wpcf7-form-control-wrap" data-name="db-name">
-                                    <input size="40"
-                                      class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control border-right-lg-none"
-                                      aria-required="true" aria-invalid="false" placeholder="Name_" value="" type="text"
-                                      name="db-name" id="name_2" />
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                            <div class="form-item">
-                              <div class="form-group">
-                                <p>
-                                  <span class="wpcf7-form-control-wrap" data-name="db-phone">
-                                    <input size="40"
-                                      class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control border-right-lg-none"
-                                      aria-required="true" aria-invalid="false" placeholder="Phone Number_" value=""
-                                      type="tel" name="db-phone" id="phone_2" />
-                                  </span>
-                                </p>
-                              </div>
-                            </div>
-                            <div class="form-item">
-                              <div class="form-group mb-0">
-                                <p>
-                                  <button type="submit" class="submit-btn btn" onclick="onClickHandler()">
-                                    Submit
-                                  </button>
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="wpcf7-response-output" style="display: none;" aria-hidden="true"></div>
-                          </form> -->
-                          <div class="btn-wrap" style="display: block;">
-                          <a class="btn btn-orange" style="background-color: #f6f6f6;"
+                        <div class="btn-wrap" style="display: block">
+                          <a class="btn btn-orange" style="background-color: #f6f6f6"
                             href="https://livingwalls.in/wp-content/uploads/2022/06/olde-town-mini-brochure-1.pdf"
                             target="_blank" rel="noopener" id="pdf-download">
                             Download Brochure
@@ -1443,8 +1297,14 @@
                             class="attachment-full size-full br-loaded"
                             data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1448x2048.png 1448w"
                             data-brsizes="(max-width: 2481px) 100vw, 2481px" sizes="(max-width: 2481px) 100vw, 2481px"
-                            srcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1448x2048.png 1448w">
-
+                            srcset="
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png           2481w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-212x300.png    212w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-724x1024.png   724w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-768x1086.png   768w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1086x1536.png 1086w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1448x2048.png 1448w
+                              " />
                         </div>
                       </div>
                       <div class="col-lg-5 col-md-5 col-12">
@@ -1460,8 +1320,7 @@
                               data-brsizes="(max-width: 300px) 100vw, 300px" />
                           </div>
                           <div class="plan-btn-group">
-                            <a href="#3BHK_OPEN_PLAN"
-                              target="_self">360&deg; virtual tour</a>
+                            <a href="#3BHK_OPEN_PLAN" target="_self">360&deg; virtual tour</a>
                             </div>
                         </div>
                       </div>
@@ -1475,19 +1334,19 @@
                     <div class="row gx-5 gx-lg-5">
                       <div class="col-lg-7 col-md-7 col-12">
                         <div class="blue-print-image">
-                          <img width="640" height="905" alt="" decoding="async" loading="lazy"
+                          <!-- <img width="640" height="905" alt="" decoding="async" loading="lazy"
                             data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/3BHK_South_projectpage-768x1086.png"
                             src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20905'%3E%3C/svg%3E"
                             class="attachment-medium_large size-medium_large br-lazy"
                             data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/3BHK_South_projectpage-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/3BHK_South_projectpage-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/3BHK_South_projectpage-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/3BHK_South_projectpage-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/3BHK_South_projectpage-1448x2048.png 1448w"
-                            data-brsizes="(max-width: 640px) 100vw, 640px" />
-                          <!-- <img width="2481" height="3508" alt="" decoding="async" loading="lazy"
+                            data-brsizes="(max-width: 640px) 100vw, 640px" /> -->
+                          <img width="2481" height="3508" alt="" decoding="async" loading="lazy"
                             data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png"
                             src="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png"
                             class="attachment-full size-full br-loaded"
                             data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1448x2048.png 1448w"
                             data-brsizes="(max-width: 2481px) 100vw, 2481px" sizes="(max-width: 2481px) 100vw, 2481px"
-                            srcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1448x2048.png 1448w"> -->
+                            srcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1448x2048.png 1448w">
                         </div>
                       </div>
                       <div class="col-lg-5 col-md-5 col-12">
@@ -1503,8 +1362,7 @@
                               data-brsizes="(max-width: 300px) 100vw, 300px" />
                           </div>
                           <div class="plan-btn-group">
-                            <a href="#3BHK_SEMI_OPEN_PLAN"
-                              target="_self">360&deg; virtual tour</a>
+                            <a href="#3BHK_SEMI_OPEN_PLAN" target="_self">360&deg; virtual tour</a>
                           </div>
                         </div>
                       </div>
@@ -1530,18 +1388,20 @@
                             class="attachment-full size-full ls-is-cached br-loaded"
                             data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-137x300.png 137w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-468x1024.png 468w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-768x1682.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-701x1536.png 701w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-935x2048.png 935w"
                             data-brsizes="(max-width: 2481px) 100vw, 2481px" sizes="(max-width: 2481px) 100vw, 2481px"
-                            srcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-137x300.png 137w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-468x1024.png 468w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-768x1682.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-701x1536.png 701w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-935x2048.png 935w">
+                            srcset="
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png          2481w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-137x300.png   137w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-468x1024.png  468w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-768x1682.png  768w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-701x1536.png  701w,
+                                https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-935x2048.png  935w
+                              " />
                         </div>
                       </div>
-                      <div class="col-lg-5 col-md-5  col-12">
+                      <div class="col-lg-5 col-md-5 col-12">
                         <div class="blue-print-details">
                           <h5>3BHK Duplex</h5>
                           <h6>2500sft to 3264sft</h6>
-                          <!-- <div class="pointer-image"></div>
-                          <div class="plan-btn-group">
-                            <a href="https://livingwalls.in/projects/olde-town/3bhk-duplex-typical/"
-                              target="_self">floor plan</a>
-                          </div> -->
                         </div>
                       </div>
                     </div>
@@ -1552,16 +1412,16 @@
           </div>
         </div>
       </section>
-      <section class="project-detail-section" style="margin-top: 100px;">
+      <section class="project-detail-section" style="margin-top: 100px">
         <div class="container">
           <div class="line-style top-two-line"></div>
           <div class="project-detail-inner">
             <div class="row">
               <div class="col-lg-9 col-md-6">
-                <div class="top-line  pro-detail-box">
+                <div class="top-line pro-detail-box">
                   <h2>3BHK Open Plan Typical</h2>
                   <h4><strong>Starting at 3.9Cr</strong></h4>
-                  <h4 class="plan-sft"><em>2458sft</em> </h4>
+                  <h4 class="plan-sft"><em>2458sft</em></h4>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
@@ -1574,27 +1434,26 @@
                 </div>
               </div>
             </div>
-      
           </div>
         </div>
       </section>
       <section class="zoom-image-section custom-iframe" id="3BHK_OPEN_PLAN">
         <div class="iframe-heading"></div>
-        <div class="iframe-container" style="display: flex; justify-content: center;">
+        <div class="iframe-container" style="display: flex; justify-content: center">
           <iframe id="360" src="https://livingwalls.in/wp-content/themes/living-walls/assets/360/3bhk-north-final/index.htm"
             scrolling="no" width="100%"></iframe>
         </div>
       </section>
-      <section class="project-detail-section" style="margin-top: 60px;">
+      <section class="project-detail-section" style="margin-top: 60px">
         <div class="container">
           <div class="line-style top-two-line"></div>
           <div class="project-detail-inner">
             <div class="row">
               <div class="col-lg-9 col-md-6">
-                <div class="top-line  pro-detail-box">
+                <div class="top-line pro-detail-box">
                   <h2>3BHK Semi Open Plan Typical</h2>
                   <h4><strong>Starting at 4.4Cr</strong></h4>
-                  <h4 class="plan-sft"><em>2823sft</em> </h4>
+                  <h4 class="plan-sft"><em>2823sft</em></h4>
                 </div>
               </div>
               <div class="col-lg-3 col-md-6">
@@ -1607,18 +1466,17 @@
                 </div>
               </div>
             </div>
-      
           </div>
         </div>
       </section>
       <section class="zoom-image-section custom-iframe" id="3BHK_SEMI_OPEN_PLAN">
         <div class="iframe-heading"></div>
-        <div class="iframe-container" style="display: flex; justify-content: center;">
+        <div class="iframe-container" style="display: flex; justify-content: center">
           <iframe id="360" src="https://livingwalls.in/wp-content/themes/living-walls/assets/360/3bhk-south-final/index.htm"
             scrolling="no" width="100%"></iframe>
         </div>
       </section>
-      <section class="amenities-facilities-section" style="margin: 20px 0;">
+      <section class="amenities-facilities-section" style="margin: 20px 0">
         <div class="container">
           <div class="amenities-container">
             <div class="row">
@@ -1666,7 +1524,7 @@
           </div>
         </div>
       </section>
-      <section class="contact-detail-section">
+      <section class="contact-detail-section" style="padding-bottom: 20px;">
         <div class="container">
           <div class="contact-detail-container">
             <div class="row">
@@ -1716,143 +1574,29 @@
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- get in touch form -->
-      <!-- <section class="getintouch">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <div class="contact-form-main-wrapper">
-                <h2>Get in touch</h2>
-                <div class="get-form">
-                  <div class="wpcf7 no-js" id="wpcf7-f6-o3" lang="en-US" dir="ltr">
-                    <div class="screen-reader-response">
-                      <p role="status" aria-live="polite" aria-atomic="true"></p>
-                      <ul></ul>
-                    </div>
-                    <form action="/projects/olde-town/#wpcf7-f6-o3" method="post" class="wpcf7-form init"
-                    aria-label="Contact form" novalidate="novalidate" data-status="init">
-                    <div style="display: none">
-                      <input type="hidden" name="_wpcf7" value="6" />
-                      <input type="hidden" name="_wpcf7_version" value="5.7.5.1" />
-                      <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                      <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f6-o3" />
-                      <input type="hidden" name="_wpcf7_container_post" value="0" />
-                      <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                    </div>
-                    <div class="row form-grid">
-                        <div class="form-item">
-                          <div class="form-group">
-                            <p>
-                              <span class="wpcf7-form-control-wrap" data-name="gt-name"><input size="40"
-                                  class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control border-right-lg-none"
-                                  aria-required="true" aria-invalid="false" placeholder="Name" value="" type="text"
-                                  name="gt-name" id="name_3" /></span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="form-item phonewidcode">
-                          <div class="form-group">
-                            <p>
-                              <span class="wpcf7-form-control-wrap gt-phone">
-                                <input size="40"
-                                  class="wpcf7-form-control wpcf7-text wpcf7-phonetext wpcf7-validates-as-required form-control border-right-lg-none"
-                                  data-numberonly="true" aria-required="true" aria-invalid="false"
-                                  placeholder="Phone Number" value="" type="text" name="gt-phone" id="phone_3" />
-                                  <input type="hidden"
-                                  name="gt-phone-country-code" class="wpcf7-phonetext-country-code" />
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="form-item">
-                          <div class="form-group">
-                            <p>
-                              <span class="wpcf7-form-control-wrap" data-name="budget"><select
-                                  class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required form-control border-right-lg-none"
-                                  aria-required="true" aria-invalid="false" name="budget">
-                                  <option value="Budget">Budget</option>
-                                  <option value="4.0 Crore">4.0 Crore</option>
-                                  <option value="4.5 Crore">4.5 Crore</option>
-                                  <option value="7.0 Crore">7.0 Crore</option>
-                                </select></span>
-                            </p>
-                          </div>
-                        </div>
-                        <div class="form-item">
-                          <div class="form-group mb-0">
-                            <p>
-                              <button type="submit" class="submit-btn btn">
-                                Submit
-                              </button>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="wpcf7-response-output" style="display: none;" aria-hidden="true"></div>
-                    </form>
-                  </div>
-                </div>
-                <div class="get-call">
-                  Call us on
-                    <a href="#">+91 96633 96979</a>
-                </div>
+            <div class="get-call get-call1">
+              Call us on
+              <a href="tel:+91995133-69730">+91 95133 69730</a>
               </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
+              </div>
+              </div>
+      </section>
     </main>
     <!-- #main -->
     <!-- #Content part end-->
     <footer id="colophon">
-      <!-- <div class="site-info">
-        <div class="container">
-          <div class="row gx-lg-5">
-            <div class="col-md-12 d-none d-lg-none d-sm-block d-md-block">
-              <div class="footer-heading">
-                <p>
-                  Tirelessly working to shrink the wide gap between &lsquo;a
-                  personalised home&rsquo; and mass produced residential real
-                  estate.
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-5 col-sm-12 logo-wrap">
-              <div class="footer-logo">
-                <img alt="Footer Logo"
-                  data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_Logos_2022_lw-AS-small-light.png"
-                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                  class="br-lazy" />
-              </div>
-            </div>
-            <div class="col-lg-8 col-md-7 col-sm-12 heading-wrap">
-              <div class="footer-heading d-md-block d-sm-none d-md-none d-lg-block">
-                <p>
-                  Tirelessly working to shrink the wide gap between &lsquo;a
-                  personalised home&rsquo; and mass produced residential real
-                  estate.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
       <div class="enquiry">
         <div class="section5Header">
-          <!-- <img src="assets/images/hashIcon.webp" class="hashIcon" alt="hashIcon" loading="lazy" height="auto" width="auto" /> -->
-          <p class="headerText" style="font-size: 30px;">
+          <p class="headerText" style="font-size: 30px">
             <span>GET IN TOUCH</span>
           </p>
         </div>
         <form class="enquiryMain" id="enquiryMain" onsubmit="return false" action="#">
           <div class="enquirySubMain">
-            <input type="text" name="name" placeholder="Name" id="name" required style="padding: 20px;" />
+            <input type="text" name="name" placeholder="Name" id="name" required style="padding: 20px" />
             <input type="tel" onclick="this.setSelectionRange(0, this.value.length)" name="phone" id="phone"
               placeholder="Mobile Number" maxlength="10" required class="inputPhone" />
-            <input type="email" name="email" placeholder="Email Address" id="email" required style="padding: 20px;" />
+            <input type="email" name="email" placeholder="Email Address" id="email" required style="padding: 20px" />
           </div>
           <div class="boxWrapper">
             <div class="checkboxWrapper">
@@ -1868,8 +1612,9 @@
                   hereby authorize FINCITY & its affiliates including banking
                   partners to call or SMS and/or WhatsApp with reference to my
                   application or in relation to any of FINCITY products,
-                  notwithstanding anything to the contrary that may be contained
-                  anywhere, including any registration for DNC/ NDNC.
+                  notwithstanding anything to the contrary that may be
+                  contained anywhere, including any registration for DNC/
+                  NDNC.
                 </span>
                 <span id="readLess1" onclick="readLess()">Read Less</span>
               </div>
@@ -1886,7 +1631,7 @@
             </p>
           </div>
           <div class="resendText">
-            <span id="numberText1">Please Enter the Verification Code sent to</span>
+            <span class="numberText1" id="numberText1">Please Enter the Verification Code sent to</span>
             <span class="changeLink" onclick="backMain(event, false)">Change</span>
           </div>
           <div class="inutContainer">
@@ -1928,96 +1673,13 @@
           </div>
         </div>
       </div>
-      <!-- .site-info -->
     </footer>
   </div>
-    <!-- #colophon -->
-    <!-- #page -->
-
-    <!-- <script>
-      document.addEventListener(
-        "wpcf7mailsent",
-        function (event) {
-          location = "https://livingwalls.in/thank-you/";
-        },
-        false
-      );
-    </script> -->
-    <!-- <script src="assets//wp-content/plugins/contact-form-7/includes/swv/js/index.js" id="swv-js"></script>
-    <script id="contact-form-7-js-extra">
-      var wpcf7 = {
-        api: {
-          root: "https:\/\/livingwalls.in\/wp-json\/",
-          namespace: "contact-form-7\/v1",
-        },
-        cached: "1",
-      };
-    </script>
-    <script src="assets//wp-content/plugins/contact-form-7/includes/js/index.js" id="contact-form-7-js"></script>
-    <script src="assets//wp-content/plugins/country-phone-field-contact-form-7/assetss/js/intlTelInput.min.js"
-      id="nbcpf-intlTelInput-script-js"></script>
-    <script src="assets//wp-content/plugins/country-phone-field-contact-form-7/assetss/js/countrySelect.min.js"
-      id="nbcpf-countryFlag-script-js"></script> -->
-    <!-- <script id="nbcpf-countryFlag-script-js-after">
-      (function ($) {
-        $(function () {
-          jQuery.ajax({
-            url: "//freegeoip.live/json/",
-            type: "POST",
-            dataType: "jsonp",
-            success: function (location) {
-              console.log(location.country_code);
-              $(".wpcf7-countrytext").countrySelect({
-                defaultCountry: location.country_code.toLowerCase(),
-              });
-              $(".wpcf7-phonetext").intlTelInput({
-                autoHideDialCode: true,
-                autoPlaceholder: "off",
-                nationalMode: false,
-                separateDialCode: true,
-                hiddenInput: "full_number",
-                initialCountry: location.country_code.toLowerCase(),
-              });
-
-              $(".wpcf7-phonetext").each(function () {
-                var hiddenInput = $(this).attr("name");
-                console.log(hiddenInput);
-                $("input[name=" + hiddenInput + "-country-code]").val(
-                  $(this).val()
-                );
-              });
-
-              $(".wpcf7-phonetext").on("countrychange", function () {
-                // do something with iti.getSelectedCountryData()
-                console.log(this.value);
-                var hiddenInput = $(this).attr("name");
-                $("input[name=" + hiddenInput + "-country-code]").val(
-                  this.value
-                );
-              });
-              $(".wpcf7-phonetext").keyup(function (e) {
-                if (/\D/g.test(this.value)) {
-                  // Filter non-digits from input value.
-                  this.value = this.value.replace(/\D/g, "");
-                }
-              });
-            },
-          });
-        });
-      })(jQuery);
-    </script> -->
-    <!-- <script id="wpcf7-redirect-script-js-extra">
-      var wpcf7r = {
-        ajax_url: "https:\/\/livingwalls.in\/wp-admin\/admin-ajax.php",
-      };
-    </script> -->
-    <!-- <script src="assets//wp-content/plugins/wpcf7-redirect/build/js/wpcf7r-fe.js" id="wpcf7-redirect-script-js"></script> -->
-    <script src="assets//wp-content/themes/living-walls/assets/js/bootstrap.bundle.min.js"
-      id="bootstrap.bundle-js"></script>
-    <script src="assets//wp-content/themes/living-walls/assets/js/site.js" id="site-js-js"></script>
-    <script src="assets//wp-content/plugins/breeze/assets/js/js-front-end/breeze-lazy-load.min.js"
-      id="breeze-lazy-js"></script>
+  <script src="assets//wp-content/themes/living-walls/assets/js/bootstrap.bundle.min.js"
+    id="bootstrap.bundle-js"></script>
+  <script src="assets//wp-content/themes/living-walls/assets/js/site.js" id="site-js-js"></script>
+  <script src="assets//wp-content/plugins/breeze/assets/js/js-front-end/breeze-lazy-load.min.js"
+    id="breeze-lazy-js"></script>
 </body>
 
 </html>
-<!-- Cache served by breeze CACHE - Last modified: Wed, 29 Mar 2023 09:23:49 GMT -->
