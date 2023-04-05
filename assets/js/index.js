@@ -1,24 +1,3 @@
-const onClickHandler = () => {
-  let name_1 = document.getElementById("name_1").value;
-  let phone_1 = document.getElementById("phone_1").value;
-  let budget_1 = document.getElementById("budget_1").value;
-
-  var formData = new FormData(document.getElementById("form"));
-  for (const value of formData.values()) {
-    console.log("»", "", value);
-  }
-  console.log("name_1", name_1);
-  console.log("phone_1", phone_1);
-  console.log("budget", budget_1);
-};
-//--------------------//
-jQuery("a").click(function (eventObject) {
-  var elem = jQuery(this);
-  if (elem.attr("href").match(/olde-town-mini-brochure-1/)) {
-    eventObject.preventDefault();
-  }
-});
-
 let intl, intl1;
 window.onload = function () {
   let input = document.getElementById("phoneNumber");
@@ -253,7 +232,7 @@ function openApi(event, on) {
       name:
         document.getElementById("Name")?.value ||
         document.getElementById("name")?.value,
-      projectId: 24,
+      projectId: 24, // for dev 103 and for stage 24
       ...(utm_campaign != null && { campaignCode: utm_campaign }),
       requireOtp: isOtp != undefined ? isOtp : false,
       email:
@@ -286,6 +265,7 @@ function openApi(event, on) {
               }</strong>`;
             responseData = res;
           } else {
+            document.getElementById("modalHeader").style.display = "none";
             document.getElementById("enquirySubMain").style.display = "none";
             document.getElementById("otpVerification").style.display = "flex";
             let len =
@@ -475,7 +455,7 @@ function detectLocation(e, check) {
 
 function backMain(e, check) {
   e.stopPropagation();
-
+  document.getElementById("modalHeader").style.display = "block";
   document.getElementById(
     check ? "otpVerification" : "otpVerification1"
   ).style.display = "none";
