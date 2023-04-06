@@ -609,9 +609,46 @@
       src="assets//wp-includes/js/jquery/jquery-migrate.min.js"
       id="jquery-migrate-js"
     ></script>
+    
     <!--  -->
     <!--  -->
     <!-- my script -->
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-10852030635"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-10852030635");
+    </script>
+    <!-- Event snippet for Living Walls - Olde Town Submit Lead Form conversion page
+          In your html page, add the snippet and call gtag_report_conversion when someone clicks 
+          on the chosen link or button. 
+    -->
+    <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof url != "undefined") {
+            window.location = url;
+          }
+        };
+        gtag("event", "conversion", {
+          send_to: "AW-10852030635/vU44CODlv5YYEKux07Yo",
+          event_callback: callback,
+        });
+        return false;
+      }
+    </script>
+
+    <!-- Google tag (gtag.js) ends -->
+
     <script src="assets/js/index.js" defer id="index-js"></script>
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
@@ -627,6 +664,8 @@
       rel="stylesheet"
       href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.19/css/intlTelInput.css"
     />
+    <link href="//fonts.cdnfonts.com/css/hero-new" rel="stylesheet" crossorigin="anonymous">
+    
     <!--  -->
     <!--  -->
     <!--  -->
@@ -1186,21 +1225,19 @@
     </div>
     <!-- call button -->
     <div class="buttonDiv" id="callButton">
-      <div class="navbarButton call">
-        <a href="tel:+9195138-80551">
-          <span class="callIcon">
-            <img
-              src="assets/images/navbarIcons/callIcon.svg"
-              alt="callIcon"
-              href="tel:+9195138-80551"
-              loading="lazy"
-              height="auto"
-              width="auto"
-            />
-          </span>
-          <span class="phoneNo">95138-80551</span>
-        </a>
-      </div>
+      <a href="tel:+9195133-69885">
+        <span class="callIcon">
+          <img
+            src="assets/images/navbarIcons/callIcon.svg"
+            alt="callIcon"
+            href="tel:+919513369885"
+            loading="lazy"
+            height="auto"
+            width="auto"
+          />
+        </span>
+        <span class="phoneNo">+91 95133-69885</span>
+      </a>
     </div>
     <!-- call button ends here -->
     <div id="page" class="site">
@@ -1228,7 +1265,7 @@
               <div class="row">
                 <div class="col-lg-10 col-md-10 col-12">
                   <div class="project-banner-content white-banner">
-                    <h1 style="font-family: 'Hero New Regular', sans-serif">
+                    <h1>
                       Olde Town
                     </h1>
                     <div class="project-description">
@@ -2101,7 +2138,7 @@
               </div>
               <div class="get-call get-call1">
                 Call us on
-                <a href="tel:+91995133-69730">+91 95133 69730</a>
+                <a href="tel:+9195133-69885">+91 95133-69885</a>
               </div>
             </div>
           </div>
