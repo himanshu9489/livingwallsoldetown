@@ -49,6 +49,21 @@ body {
     color: #FFFFFF;
 }
 
+
+
+.buttonDiv {
+    display: none;
+    position: fixed;
+    top: 100px;
+    gap: 20px;
+    align-items: center;
+    z-index: 20;
+    animation-name: callButton;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
 @keyframes callButton {
     from {
         right: -50%
@@ -57,20 +72,6 @@ body {
     to {
         right: 0;
     }
-}
-
-.buttonDiv {
-    display: none;
-    position: fixed;
-    top: 100px;
-    
-    gap: 20px;
-    align-items: center;
-    z-index: 20;
-    animation-name: callButton;
-    animation-duration: .5s;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
 }
 
 /* @keyframes tilt-shaking {
@@ -109,16 +110,6 @@ body {
 
 .navImg {
     height: 80px;
-}
-
-@keyframes call-button {
-    from {
-        width: 0;
-    }
-
-    to  {
-        width: max-content;
-    }
 }
 
 .navbarButton {
