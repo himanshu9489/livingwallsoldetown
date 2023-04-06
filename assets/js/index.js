@@ -181,7 +181,7 @@ window.addEventListener("load", (event) => {
   setTimeout(() => {
     console.log("yo");
     document.getElementById("callButton").style.display = "flex";
-  }, 1000);
+  }, 100);
 });
 
 const myobserver = new IntersectionObserver(
@@ -256,7 +256,7 @@ function openApi(event, on) {
       name:
         document.getElementById("Name")?.value ||
         document.getElementById("name")?.value,
-      projectId: 24, // for dev 103 and for stage 24
+      projectId: 25, // for dev 103 and for stage 24 and 25 for prod
       ...(utm_campaign != null && { campaignCode: utm_campaign }),
       requireOtp: isOtp != undefined ? isOtp : false,
       email:
