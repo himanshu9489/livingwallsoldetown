@@ -1,24 +1,24 @@
 @font-face {
     font-family: "Hero-Regular";
-    src: url("/assets/font/Hero-New-Regular.otf") format("woff");
-    font-weight: normal;
+    src: url("../font/Hero-New-Regular.otf") format("opentype");
+    font-weight: 400;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Hero-Medium";
-    src: url("/assets/font/Hero-New-Medium.otf") format("woff");
-    font-weight: medium;
+    src: url("../font/Hero-New-Medium.otf") format("opentype");
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 
 @font-face {
-    font-family: "Hero-Bold";
-    src: url("/assets/font/Hero-New-Bold.otf") format("woff");
-    font-weight: bold;
+    font-family: "Hero-semiBold";
+    src: url("../font/Hero-New-SemiBold.otf") format("opentype");
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }
@@ -31,15 +31,15 @@
 
 :root{
     --hero-regular: "Hero-Regular",sans-serif;
-    --hero-semibold: "Hero-Bold",sans-serif;
+    --hero-semibold: "Hero-semiBold",sans-serif;
     --hero-medium:  "Hero-Medium",sans-serif;
 }
 
 body {
     font-family: "Hero-Regular",sans-serif;
-    /* font-family: Arial, Helvetica, sans-serif; */
     margin: 0px;
     width: 100%;
+    font-weight:400;
 }
 
 h1, h2, h3, h4, h5, h6 {
