@@ -179,45 +179,72 @@ window.addEventListener(
 
 window.addEventListener("load", (event) => {
   setTimeout(() => {
-    console.log("yo");
     document.getElementById("callButton").style.display = "flex";
   }, 100);
 });
 
+let target = document.querySelector(".banner-container.heading-white");
+let topTarget = document.querySelector(".project-banner");
+const callIcon = document.querySelector(".buttonDiv .callIcon");
+const btnDiv = document.querySelector(".buttonDiv");
+const body = document.querySelector("body");
+
+const hide = () => {
+  if (window.innerWidth <= 768) return;
+  btnDiv.setAttribute(
+    "style",
+    `border-radius: 100%;padding: 0; transform: translateX(calc(100% - ${
+      callIcon.getBoundingClientRect().width + 20
+    }px)); background-color: transparent;`
+  );
+};
+
+const show = () => {
+  if (window.innerWidth <= 768) return;
+  btnDiv.setAttribute("style", ``);
+};
+
 const myobserver = new IntersectionObserver(
   (entries) => {
-    console.log(entries);
     entries.forEach((entry) => {
-      console.log(entry, "observer");
-      // document.getElementById("callButton").style.display = "none";
+      if (!entry.isIntersecting) return;
+
+      if (entry.target === target) {
+        hide();
+        btnDiv.addEventListener("mouseenter", show);
+        btnDiv.addEventListener("mouseleave", hide);
+      }
+      if (entry.target === topTarget) {
+        show();
+        btnDiv.removeEventListener("mouseenter", show);
+        btnDiv.removeEventListener("mouseleave", hide);
+      }
     });
   },
   {
-    threshold: 0.75,
+    threshold: 0.2,
   }
 );
 
-let target = document.querySelector(".project-banner-image");
-console.log(target, "kirk");
+myobserver.observe(topTarget);
 myobserver.observe(target);
 
-window.addEventListener(
-  "load",
-  (event) =>
-    setTimeout(() => {
-      document.getElementById("modal").style.display = "block";
-      let blur = document.getElementById("page");
-      blur.style.filter = "blur(5px)";
-      blur.style.pointerEvents = "none";
-    }, 2000),
-  false
-);
+window.addEventListener("load", (event) => {
+  setTimeout(() => {
+    document.getElementById("modal").style.display = "block";
+    let blur = document.getElementById("page");
+    let blur1 = document.getElementById("callButton");
+    blur.classList.add("modalBlur");
+    blur1.classList.add("modalBlur");
+  }, 3000);
+});
 
 function closeModal() {
   document.getElementById("modal").style.display = "none";
   let blur = document.getElementById("page");
-  blur.style.filter = "blur(0px)";
-  blur.style.pointerEvents = "all";
+  let blur1 = document.getElementById("callButton");
+  blur.classList.remove("modalBlur");
+  blur1.classList.remove("modalBlur");
 }
 
 let responseData;
@@ -275,6 +302,7 @@ function openApi(event, on) {
     axios
       .post("https://api-dcrm.fincity.com/open/opportunity", body)
       .then((res) => {
+        gtag_report_conversion();
         if (isOtp) {
           if (on) {
             document
