@@ -2100,10 +2100,10 @@ input[type='checkbox'] {
     gap: 10px;
 }
 
-.mainInner img:last-of-type {
+/* .mainInner img:last-of-type {
     border-left: 1px solid #00000033;
     padding-left: 20px
-}
+} */
 
 .mainInner img {
     height: auto;
