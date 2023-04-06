@@ -177,6 +177,30 @@ window.addEventListener(
   false
 );
 
+window.addEventListener("load", (event) => {
+  setTimeout(() => {
+    console.log("yo");
+    document.getElementById("callButton").style.display = "flex";
+  }, 1000);
+});
+
+const myobserver = new IntersectionObserver(
+  (entries) => {
+    console.log(entries);
+    entries.forEach((entry) => {
+      console.log(entry, "observer");
+      // document.getElementById("callButton").style.display = "none";
+    });
+  },
+  {
+    threshold: 0.75,
+  }
+);
+
+let target = document.querySelector(".project-banner-image");
+console.log(target, "kirk");
+myobserver.observe(target);
+
 window.addEventListener(
   "load",
   (event) =>
@@ -249,7 +273,7 @@ function openApi(event, on) {
       }),
     };
     axios
-      .post("http://api-dcrm-stage.fincity.in/open/opportunity", body)
+      .post("https://api-dcrm.fincity.com/open/opportunity", body)
       .then((res) => {
         if (isOtp) {
           if (on) {
@@ -415,10 +439,7 @@ function detectLocation(e, check) {
         };
 
         axios
-          .post(
-            `http://api-dcrm-stage.fincity.in/open/opportunity/verify`,
-            body
-          )
+          .post(`https://api-dcrm.fincity.com/open/opportunity/verify`, body)
           .then((res) => {
             document.getElementById(
               check ? "detectText" : "detectText1"
@@ -473,7 +494,7 @@ function resendOtp(e, check) {
   e.stopPropagation();
   axios
     .post(
-      `http://api-dcrm-stage.fincity.in/open/opportunity/send-otp?token=${responseData?.data?.token}`
+      `https://api-dcrm.fincity.com/open/opportunity/send-otp?token=${responseData?.data?.token}`
     )
     .then((res) => {
       document.querySelector(check ? "#resendOtp" : "#resendOtp1").innerText =
@@ -495,7 +516,7 @@ function verfiyOtp(e, check) {
     otp: otp,
   };
   axios
-    .post(`http://api-dcrm-stage.fincity.in/open/opportunity/verify`, body)
+    .post(`https://api-dcrm.fincity.com/open/opportunity/verify`, body)
     .then((res) => {
       document.getElementById(
         check ? "otpVerification" : "otpVerification1"
@@ -510,7 +531,7 @@ function verfiyOtp(e, check) {
         if (count === 0) {
           let deviceType = getDeviceType();
           clearInterval(countdown);
-          window.location.href = `https://dcrm-stage.fincity.in/?&user=consumer&device-type=${deviceType}&token=${res?.data?.consumerToken}&isLandingPage=true`;
+          window.location.href = `https://dcrm.fincity.com/?&user=consumer&device-type=${deviceType}&token=${res?.data?.consumerToken}&isLandingPage=true`;
         }
       }, 1000);
     })
