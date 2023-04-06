@@ -612,7 +612,7 @@
     <!--  -->
     <!--  -->
     <!-- my script -->
-    <script src="assets/js/index.js" id="index-js"></script>
+    <script src="assets/js/index.js" defer id="index-js"></script>
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
       defer
@@ -1185,7 +1185,8 @@
       </div>
     </div>
     <div id="page" class="site">
-      <div class="buttonDiv">
+      <!-- call button -->
+      <div class="buttonDiv" id="callButton">
         <div class="navbarButton call">
           <a href="tel:+9195138-80551">
             <span class="callIcon">
@@ -1202,6 +1203,7 @@
           </a>
         </div>
       </div>
+      <!-- call button ends here -->
       <main id="primary" class="site-main">
         <section class="project-banner">
           <div class="container">
@@ -2304,5 +2306,9 @@
       src="assets//wp-content/plugins/breeze/assets/js/js-front-end/breeze-lazy-load.min.js"
       id="breeze-lazy-js"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({});
+    </script>
   </body>
 </html>
