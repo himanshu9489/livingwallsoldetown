@@ -1,3 +1,4 @@
+//---- form submission releted js ---//
 let intl, intl1;
 window.onload = function () {
   let input = document.getElementById("phoneNumber");
@@ -83,10 +84,6 @@ function checkNumber(item) {
   });
 }
 
-function excute(data) {
-  return;
-}
-
 function readMore() {
   document.getElementById("displayMore").style.display = "block";
   document.getElementById("read").style.display = "none";
@@ -159,30 +156,32 @@ window.addEventListener(
   false
 );
 
-window.addEventListener(
-  "load",
-  (event) => {
-    jQuery(".clicker").click(function () {
-      if ($(this).hasClass("open")) {
-        $(this).removeClass("open");
-        $(this).find(".containerDivMain").slideUp(400);
-      } else {
-        $(".clicker").find(".containerDivMain").slideUp(400);
-        $(".clicker").removeClass("open");
-        $(this).addClass("open");
-        $(this).find(".containerDivMain").slideDown(400);
-      }
-    });
-  },
-  false
-);
+// window.addEventListener(
+//   "load",
+//   (event) => {
+//     jQuery(".clicker").click(function () {
+//       if ($(this).hasClass("open")) {
+//         $(this).removeClass("open");
+//         $(this).find(".containerDivMain").slideUp(400);
+//       } else {
+//         $(".clicker").find(".containerDivMain").slideUp(400);
+//         $(".clicker").removeClass("open");
+//         $(this).addClass("open");
+//         $(this).find(".containerDivMain").slideDown(400);
+//       }
+//     });
+//   },
+//   false
+// );
 
+//---- add call button slide effect---//
 window.addEventListener("load", (event) => {
   setTimeout(() => {
     document.getElementById("callButton").style.display = "flex";
   }, 100);
 });
 
+// --- observer implementation---- //
 let target = document.querySelector(".banner-container.heading-white");
 let topTarget = document.querySelector(".project-banner");
 const callIcon = document.querySelector(".buttonDiv .callIcon");
@@ -229,6 +228,8 @@ const myobserver = new IntersectionObserver(
 myobserver.observe(topTarget);
 myobserver.observe(target);
 
+//--- implement modal for form submission ---//
+
 window.addEventListener("load", (event) => {
   setTimeout(() => {
     document.getElementById("modal").style.display = "block";
@@ -246,6 +247,8 @@ function closeModal() {
   blur.classList.remove("modalBlur");
   blur1.classList.remove("modalBlur");
 }
+
+//---- form submission releted js ---//
 
 let responseData;
 function openApi(event, on) {
@@ -351,78 +354,78 @@ function openApi(event, on) {
   }
 }
 
-const options = {
-  useEasing: true,
-  useGrouping: true,
-  separator: ",",
-  decimal: ".",
-  decimalPlaces: 1,
-};
+// const options = {
+//   useEasing: true,
+//   useGrouping: true,
+//   separator: ",",
+//   decimal: ".",
+//   decimalPlaces: 1,
+// };
 
-options1 = {
-  useEasing: true,
-  useGrouping: true,
-  separator: ",",
-  useIndianSeparators: true,
-};
+// options1 = {
+//   useEasing: true,
+//   useGrouping: true,
+//   separator: ",",
+//   useIndianSeparators: true,
+// };
 
-function animateValue(id, end, round) {
-  const counter = new countUp.CountUp(id, end, round ? options : options1);
-  counter.start();
-}
+// function animateValue(id, end, round) {
+//   const counter = new countUp.CountUp(id, end, round ? options : options1);
+//   counter.start();
+// }
 
-var animation, animation1;
-window.addEventListener(
-  "load",
-  (event) => {
-    observer.observe(document.querySelector(".section4"));
-    observer.observe(document.querySelector(".section2"));
-    observer.observe(document.querySelector(".section2Mobile"));
-    animation = lottie.loadAnimation({
-      container: document.getElementById("outer"),
-      renderer: "svg",
-      loop: false,
-      speed: 1.0,
-      autoplay: true,
-      path: "assets/images/lottie1.json",
-    });
-    animation1 = lottie.loadAnimation({
-      container: document.getElementById("outer1"),
-      renderer: "svg",
-      loop: false,
-      speed: 1.0,
-      autoplay: true,
-      path: "assets/images/lottie1Mobile.json",
-    });
-  },
-  false
-);
+// var animation, animation1;
+// window.addEventListener(
+//   "load",
+//   (event) => {
+//     observer.observe(document.querySelector(".section4"));
+//     observer.observe(document.querySelector(".section2"));
+//     observer.observe(document.querySelector(".section2Mobile"));
+//     animation = lottie.loadAnimation({
+//       container: document.getElementById("outer"),
+//       renderer: "svg",
+//       loop: false,
+//       speed: 1.0,
+//       autoplay: true,
+//       path: "assets/images/lottie1.json",
+//     });
+//     animation1 = lottie.loadAnimation({
+//       container: document.getElementById("outer1"),
+//       renderer: "svg",
+//       loop: false,
+//       speed: 1.0,
+//       autoplay: true,
+//       path: "assets/images/lottie1Mobile.json",
+//     });
+//   },
+//   false
+// );
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry?.isIntersecting) {
-        load();
-        animation.play();
-        animation1.play();
-      } else {
-        animation.stop();
-        animation1.stop();
-        return;
-      }
-    });
-  },
-  { threshold: 0.75 }
-);
+// const observer = new IntersectionObserver(
+//   (entries) => {
+//     entries.forEach((entry) => {
+//       if (entry?.isIntersecting) {
+//         load();
+//         animation.play();
+//         animation1.play();
+//       } else {
+//         animation.stop();
+//         animation1.stop();
+//         return;
+//       }
+//     });
+//   },
+//   { threshold: 0.75 }
+// );
 
-function load() {
-  animateValue("count1", 1.8, true);
-  animateValue("count2", 511, false);
-  animateValue("count3", 267273, false);
-  animateValue("count4", 1.8, true);
-  animateValue("count5", 511, false);
-  animateValue("count6", 267273, false);
-}
+// function load() {
+//   animateValue("count1", 1.8, true);
+//   animateValue("count2", 511, false);
+//   animateValue("count3", 267273, false);
+//   animateValue("count4", 1.8, true);
+//   animateValue("count5", 511, false);
+//   animateValue("count6", 267273, false);
+// }
 
 function clickEvent(first, last) {
   if (first.value.length) {
