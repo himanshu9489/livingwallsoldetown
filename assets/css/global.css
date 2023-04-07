@@ -385,7 +385,12 @@ input[type='checkbox'] {
     
 }
 .checkboxWrapper span {
+    color: white;
     font-size: 12px;
+}
+
+.smallFont {
+    font-size: 12px !important;
 }
 
 .checkboxWrapper span:last-of-type {
