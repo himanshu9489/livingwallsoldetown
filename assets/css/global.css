@@ -215,7 +215,8 @@ button:not(.location button) {
 }
 
 #displayMore,
-#displayMoreTwo {
+#displayMoreTwo,
+#displayMoreThree {
     display: none;
 }
 
@@ -223,7 +224,7 @@ button:not(.location button) {
     cursor: pointer;
 }
 
-#readLess1 {
+#readLess1,#readLessButton {
     display: none;
     cursor: pointer;
 }
@@ -316,8 +317,8 @@ button {
     display: flex;
     flex-direction: column;
     background-color: #303538;
-    gap: 80px;
-    padding: 80px;
+    gap: 40px 80px;
+    padding: 40px;
 
 }
 
@@ -325,7 +326,7 @@ button {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 26px;
     align-items: center;
 }
 
@@ -380,6 +381,9 @@ input[type='checkbox'] {
 .checkboxWrapper p {
     margin: 0px;
     color: white;
+}
+.checkboxWrapper span {
+    font-size: 12px;
 }
 
 .checkboxWrapper span:last-of-type {
@@ -579,6 +583,76 @@ input[type='checkbox'] {
     margin-bottom: 28px;
 }
 
+
+.enquiry1 {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 80px;
+}
+
+.sectionHeader{
+    margin: 0;
+}
+.headerText {
+    font-size: 32px;
+}
+.enquiryMain1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: start;
+}
+
+.enquiryMain1 button {
+    background-color: #D75E35;
+    color: #FFFFFF;
+    width: 280px !important;
+  
+}
+.mobileButton {
+  align-self: center;
+  display: none;
+}
+.enquiryMain1 input {
+    border: 1px solid #bcbcbc;
+    border-radius: 36px;
+    width: 280px;
+    height: 40px;
+}
+.enquirySubMain1{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.boxWrapper1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: start;
+    width: 100%;
+}
+.checkboxWrapper1 {
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+}
+.checkboxWrapper1 span:last-of-type {
+    font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+    .enquiry1 {
+        padding: 0 110px;
+    }
+}
+
+
 @media (max-width: 768px) {
 
     .newImg {
@@ -660,6 +734,12 @@ input[type='checkbox'] {
     .enquirySubMain .iti,
     input {
         width: 100% !important;
+    }
+    .my-detailed-plan-inner {
+        padding: 0;
+    }
+    .my-detailed-plan-right {
+        padding-right: 20px;
     }
 
 }
