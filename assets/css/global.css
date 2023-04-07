@@ -224,7 +224,11 @@ button:not(.location button) {
     cursor: pointer;
 }
 
-#readLess1,#readLessButton {
+#readLess1 {
+    display: none;
+    cursor: pointer;
+}
+#readLessButton {
     display: none;
     cursor: pointer;
 }
