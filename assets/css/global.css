@@ -224,7 +224,11 @@ button:not(.location button) {
     cursor: pointer;
 }
 
-#readLess1,#readLessButton {
+#readLess1 {
+    display: none;
+    cursor: pointer;
+}
+#readLessButton {
     display: none;
     cursor: pointer;
 }
@@ -385,7 +389,12 @@ input[type='checkbox'] {
     
 }
 .checkboxWrapper span {
+    color: white;
     font-size: 12px;
+}
+
+.smallFont {
+    font-size: 12px !important;
 }
 
 .checkboxWrapper span:last-of-type {

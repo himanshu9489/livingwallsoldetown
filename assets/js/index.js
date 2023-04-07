@@ -1,5 +1,5 @@
 //---- form submission releted js ---//
-let intl, intl1;
+let intl, intl1, intl2;
 window.onload = function () {
   let input = document.getElementById("phoneNumber");
   intl = window.intlTelInput(input, {
@@ -57,8 +57,37 @@ window.onload = function () {
     ],
   });
 
+  let input3 = document.getElementById("phone1");
+  intl2 = window.intlTelInput(input3, {
+    separateDialCode: true,
+    initialCountry: "IN",
+    onlyCountries: [
+      "AU",
+      "BT",
+      "BR",
+      "CA",
+      "CN",
+      "DE",
+      "HK",
+      "IN",
+      "IT",
+      "JP",
+      "KW",
+      "MY",
+      "MV",
+      "NP",
+      "QA",
+      "SA",
+      "SG",
+      "LK",
+      "TH",
+      "AE",
+    ],
+  });
+
   checkNumber(document.getElementById("phoneNumber"));
   checkNumber(document.getElementById("phone"));
+  checkNumber(document.getElementById("phone1"));
   document.querySelectorAll(".otpInput").forEach((e) => {
     checkNumber(e);
   });
@@ -106,6 +135,18 @@ function readLess2() {
   document.getElementById("displayMore").style.display = "none";
   document.getElementById("read").style.display = "block";
   document.getElementById("readLess2").style.display = "none";
+}
+
+function readMore3() {
+  document.getElementById("displayMoreThree").style.display = "inline";
+  document.getElementById("displayLessThree").style.display = "none";
+  document.getElementById("readLessButton").style.display = "inline";
+}
+
+function readLess3() {
+  document.getElementById("displayMoreThree").style.display = "none";
+  document.getElementById("displayLessThree").style.display = "block";
+  document.getElementById("readLessButton").style.display = "none";
 }
 
 function checkInputs(inputs, submitButton) {
