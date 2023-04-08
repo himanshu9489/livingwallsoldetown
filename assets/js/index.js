@@ -165,12 +165,22 @@ window.addEventListener(
       document.getElementById("enquirBbutton1")
     );
     checkInputs([...form].splice(3), document.getElementById("enquirBbutton2"));
+
+    let form1 = document.querySelectorAll(".enquirySubSubMain1 input");
+
+    checkInputs([...form1], document.getElementById("enquirBbutton3"));
+
     let otpForm = document.querySelectorAll(".inutContainer input");
+
     checkInputs(
       [...otpForm].splice(0, 4),
       document.getElementById("otpBbutton1")
     );
-    checkInputs([...otpForm].splice(4), document.getElementById("otpBbutton2"));
+    checkInputs(
+      [...otpForm].splice(4, 4),
+      document.getElementById("otpBbutton3")
+    );
+    checkInputs([...otpForm].splice(8), document.getElementById("otpBbutton2"));
   },
   false
 );
@@ -187,12 +197,21 @@ window.addEventListener(
     );
     checkInputs([...form].splice(3), document.getElementById("enquirBbutton2"));
 
+    let form1 = document.querySelectorAll(".enquirySubSubMain1 input");
+
+    checkInputs([...form1], document.getElementById("enquirBbutton3"));
+
     let otpForm = document.querySelectorAll(".inutContainer input");
+
     checkInputs(
       [...otpForm].splice(0, 4),
       document.getElementById("otpBbutton1")
     );
-    checkInputs([...otpForm].splice(4), document.getElementById("otpBbutton2"));
+    checkInputs(
+      [...otpForm].splice(4, 4),
+      document.getElementById("otpBbutton3")
+    );
+    checkInputs([...otpForm].splice(8), document.getElementById("otpBbutton2"));
   },
   false
 );
@@ -205,7 +224,7 @@ window.addEventListener("load", (event) => {
 });
 
 // --- observer implementation---- //
-let target = document.querySelector(".banner-container.heading-white");
+let target = document.querySelector(".enquiry1");
 let topTarget = document.querySelector(".project-banner");
 const callIcon = document.querySelector(".buttonDiv .callIcon");
 const btnDiv = document.querySelector(".buttonDiv");
@@ -263,6 +282,17 @@ window.addEventListener("load", (event) => {
   }, 3000);
 });
 
+let downloadPdf = false;
+
+function openModal() {
+  document.getElementById("modal").style.display = "block";
+  let blur = document.getElementById("page");
+  let blur1 = document.getElementById("callButton");
+  blur.classList.add("modalBlur");
+  blur1.classList.add("modalBlur");
+  downloadPdf = true;
+}
+
 function closeModal() {
   document.getElementById("modal").style.display = "none";
   let blur = document.getElementById("page");
@@ -276,7 +306,9 @@ function closeModal() {
 let responseData;
 function openApi(event, on) {
   event.stopPropagation();
-  let in_ = document.getElementById(on ? "enquirBbutton2" : "enquirBbutton1");
+  let in_ = document.getElementById(
+    on == 1 ? "enquirBbutton1" : on == 2 ? "enquirBbutton2" : "enquirBbutton3"
+  );
   in_.style.pointerEvents = "none";
   in_.innerHTML +=
     "<lottie-player class='loading' id='loading' src='assets/images/loading.json' background='transparent' speed='1' autoplay loop style='width: 50px; height: 50px'></lottie-player>";
@@ -285,11 +317,14 @@ function openApi(event, on) {
 
   if (
     (document.getElementById("Email")?.value?.match(emailRegex) ||
-      document.getElementById("email")?.value?.match(emailRegex)) &&
+      document.getElementById("email")?.value?.match(emailRegex) ||
+      document.getElementById("email1")?.value?.match(emailRegex)) &&
     (document.getElementById("Name")?.value ||
-      document.getElementById("name")?.value) &&
+      document.getElementById("name")?.value ||
+      document.getElementById("name1")?.value) &&
     (document.getElementById("phoneNumber")?.value ||
-      document.getElementById("phone")?.value)
+      document.getElementById("phone")?.value ||
+      document.getElementById("phone1")?.value)
   ) {
     let url = window.location.href;
     let searchParams = new URLSearchParams(new URL(url).search);
@@ -305,16 +340,19 @@ function openApi(event, on) {
     let body = {
       phone:
         document.getElementById("phoneNumber")?.value ||
-        document.getElementById("phone")?.value,
+        document.getElementById("phone")?.value ||
+        document.getElementById("phone1")?.value,
       name:
         document.getElementById("Name")?.value ||
-        document.getElementById("name")?.value,
+        document.getElementById("name")?.value ||
+        document.getElementById("name1")?.value,
       projectId: 25, // for dev 103 and for stage 24 and 25 for prod
       ...(utm_campaign != null && { campaignCode: utm_campaign }),
       requireOtp: isOtp != undefined ? isOtp : false,
       email:
         document.getElementById("Email")?.value ||
-        document.getElementById("email")?.value,
+        document.getElementById("email")?.value ||
+        document.getElementById("email1")?.value,
       ...(check && {
         metadata: {
           utm_campaign: utm_campaign,
@@ -329,8 +367,22 @@ function openApi(event, on) {
       .post("https://api-dcrm.fincity.com/open/opportunity", body)
       .then((res) => {
         gtag_report_conversion();
+        if (downloadPdf === true) {
+          document.getElementById("pdfDownload").click();
+          downloadPdf = false;
+        }
         if (isOtp) {
-          if (on) {
+          if (on == 1) {
+            document.getElementById("modalHeader").style.display = "none";
+            document.getElementById("enquirySubMain").style.display = "none";
+            document.getElementById("otpVerification").style.display = "flex";
+            document.querySelector("#numberText").innerHTML =
+              document.querySelector("#numberText").innerText +
+              `<strong> +${intl.getSelectedCountryData()?.dialCode}-${
+                document.getElementById("phoneNumber")?.value
+              }</strong>`;
+            responseData = res;
+          } else if (on == 2) {
             document
               .querySelector(".enquiry .section5Header")
               .setAttribute("style", "display: none");
@@ -342,19 +394,16 @@ function openApi(event, on) {
                 document.getElementById("phone")?.value
               }</strong>`;
             responseData = res;
-          } else {
-            document.getElementById("modalHeader").style.display = "none";
-            document.getElementById("enquirySubMain").style.display = "none";
-            document.getElementById("otpVerification").style.display = "flex";
-            let len =
-              document.querySelector("#phoneNumber")?.parentElement.innerText
-                ?.length;
-            document.getElementById("enquirySubMain").style.display = "none";
-            document.getElementById("otpVerification").style.display = "flex";
-            document.querySelector("#numberText").innerHTML =
-              document.querySelector("#numberText").innerText +
-              `<strong> +${intl.getSelectedCountryData()?.dialCode}-${
-                document.getElementById("phoneNumber")?.value
+          } else if (on == 3) {
+            document
+              .querySelector(".enquiry1 .sectionHeader")
+              .setAttribute("style", "display: none");
+            document.getElementById("enquiryMain1").style.display = "none";
+            document.getElementById("otpVerification2").style.display = "flex";
+            document.querySelector("#numberText2").innerHTML =
+              document.querySelector("#numberText2").innerText +
+              `<strong> +${intl1.getSelectedCountryData()?.dialCode}-${
+                document.getElementById("phone1")?.value
               }</strong>`;
             responseData = res;
           }
@@ -366,7 +415,11 @@ function openApi(event, on) {
       })
       .catch((err) => {
         let in_ = document.getElementById(
-          on ? "enquirBbutton2" : "enquirBbutton1"
+          on == 1
+            ? "enquirBbutton1"
+            : on == 2
+            ? "enquirBbutton2"
+            : "enquirBbutton3"
         );
         in_.style.pointerEvents = "all";
         document.getElementById("error").style.display = "block";
@@ -399,12 +452,16 @@ const optionLocation = {
 function detectLocation(e, check) {
   document
     .querySelector(
-      check ? "#locationButton #detect" : "#locationButton1 #detect1"
+      check == 1
+        ? "#locationButton #detect"
+        : check == 2
+        ? "#locationButton1 #detect1"
+        : "#locationButton2 #detect2"
     )
     .remove();
 
   document.querySelector(
-    check ? "#locationButton #loading" : "#locationButton1 #loading1"
+    check == 1 ? "#loading" : check == 2 ? "#loading1" : "#loading2"
   ).style.display = "block";
 
   if (navigator.geolocation) {
@@ -423,16 +480,33 @@ function detectLocation(e, check) {
           .post(`https://api-dcrm.fincity.com/open/opportunity/verify`, body)
           .then((res) => {
             document.getElementById(
-              check ? "detectText" : "detectText1"
+              check == 1
+                ? "detectText"
+                : check == 2
+                ? "detectText1"
+                : "detectText2"
             ).innerText = "Location Detected";
+
             document.querySelector(
-              check ? "#locationButton #loading" : "#locationButton1 #loading1"
+              check == 1
+                ? "#locationButton #loading"
+                : check == 2
+                ? "#locationButton1 #loading1"
+                : "#locationButton2 #loading2"
             ).style.display = "none";
+
             document.getElementById(
-              check ? "locationButton" : "locationButton1"
+              check == 1
+                ? "locationButton"
+                : (check = 2 ? "locationButton1" : "locationButton2")
             ).style.pointerEvents = "none";
+
             document.querySelector(
-              check ? "#locationButton #timer" : "#locationButton1 #timer1"
+              check == 1
+                ? "#locationButton #timer"
+                : check == 2
+                ? "#locationButton1 #timer1"
+                : "#locationButton2 #timer2"
             ).style.display = "block";
           })
           .catch((err) => {});
@@ -440,18 +514,21 @@ function detectLocation(e, check) {
       (error) => {
         // There was an error retrieving the location
         document.getElementById(
-          check ? "detectText" : "detectText1"
+          check == 1 ? "detectText" : check == 2 ? "detectText1" : "detectText2"
         ).innerText = "Failed to fetch Location!";
-        document.getElementById(check ? "loading" : "loading1").style.display =
-          "none";
+        document.getElementById(
+          check == 1 ? "loading" : check == 2 ? "loading1" : "loading2"
+        ).style.display = "none";
       },
       optionLocation
     );
   } else {
-    document.getElementById(check ? "loading" : "loading1").style.display =
-      "none";
-    document.getElementById(check ? "detectText" : "detectText1").innerText =
-      "Failed to fetch Location!";
+    document.getElementById(
+      check == 1 ? "loading" : check == 2 ? "loading1" : "loading2"
+    ).style.display = "none";
+    document.getElementById(
+      check == 1 ? "detectText" : check == 2 ? "detectText1" : "detectText2"
+    ).innerText = "Failed to fetch Location!";
   }
 }
 
@@ -459,15 +536,24 @@ function backMain(e, check) {
   e.stopPropagation();
   document.getElementById("modalHeader").style.display = "block";
   document.getElementById(
-    check ? "otpVerification" : "otpVerification1"
+    check == 1
+      ? "otpVerification"
+      : check == 2
+      ? "otpVerification1"
+      : "otpVerification2"
   ).style.display = "none";
   document.getElementById(
-    check ? "enquirySubMain" : "enquiryMain"
+    check == 1 ? "enquirySubMain" : check == 2 ? "enquiryMain" : "enquiryMain1"
   ).style.display = "flex";
-  document.querySelector(check ? "#numberText" : "#numberText1").innerHTML =
-    "Please Enter the Verification Code sent to";
+  document.querySelector(
+    check == 1 ? "#numberText" : check == 2 ? "#numberText1" : "#numberText2"
+  ).innerHTML = "Please Enter the Verification Code sent to";
   document.getElementById(
-    check ? "enquirBbutton1" : "enquirBbutton2"
+    check == 1
+      ? "enquirBbutton1"
+      : check == 2
+      ? "enquirBbutton2"
+      : "enquirBbutton3"
   ).style.pointerEvents = "all";
 }
 
@@ -488,10 +574,18 @@ function resendOtp(e, check) {
 function verfiyOtp(e, check) {
   e.stopPropagation();
   let otp =
-    document.querySelector(check ? "#_1st" : "#_1st_")?.value +
-    document.querySelector(check ? "#_2nd" : "#_2nd_")?.value +
-    document.querySelector(check ? "#_3rd" : "#_3rd_")?.value +
-    document.querySelector(check ? "#_4th" : "#_4th_")?.value;
+    document.querySelector(
+      check == 1 ? "#_1st" : check == 2 ? "#_1st_" : "#_1st_3"
+    )?.value +
+    document.querySelector(
+      check == 1 ? "#_2nd" : check == 2 ? "#_2nd_" : "#_2nd_3"
+    )?.value +
+    document.querySelector(
+      check == 1 ? "#_3rd" : check == 2 ? "#_3rd_" : "#_3rd_3"
+    )?.value +
+    document.querySelector(
+      check == 1 ? "#_4th" : check == 2 ? "#_4th_" : "#_4th_3"
+    )?.value;
   let body = {
     token: responseData?.data?.token,
     otp: otp,
@@ -500,10 +594,15 @@ function verfiyOtp(e, check) {
     .post(`https://api-dcrm.fincity.com/open/opportunity/verify`, body)
     .then((res) => {
       document.getElementById(
-        check ? "otpVerification" : "otpVerification1"
+        check == 1
+          ? "otpVerification"
+          : check == 2
+          ? "otpVerification1"
+          : "otpVerification2"
       ).style.display = "none";
-      document.getElementById(check ? "location" : "location1").style.display =
-        "flex";
+      document.getElementById(
+        check == 1 ? "location" : check == 2 ? "location1" : "location2"
+      ).style.display = "flex";
       let count = 10;
 
       let countdown = setInterval(() => {
