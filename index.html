@@ -1104,7 +1104,7 @@
             class="enquirBbutton"
             id="enquirBbutton1"
             type="submit"
-            onclick="openApi(event, false)"
+            onclick="openApi(event, 1)"
           >
             Get More Information
           </button>
@@ -1124,7 +1124,7 @@
             <span class="numberText" id="numberText"
               >Please Enter the Verification Code sent to</span
             >
-            <span class="changeLink" onclick="backMain(event, true)"
+            <span class="changeLink" onclick="backMain(event, 1)"
               >Change</span
             >
           </div>
@@ -1169,7 +1169,7 @@
             class="otpBbutton"
             id="otpBbutton1"
             type="submit"
-            onclick="verfiyOtp(event, true)"
+            onclick="verfiyOtp(event, 1)"
           >
             Verify
           </button>
@@ -1197,7 +1197,7 @@
               class="locationButton"
               id="locationButton"
               type="submit"
-              onclick="detectLocation(event, true)"
+              onclick="detectLocation(event, 1)"
             >
               <p class="detectText" id="detectText">Detect My Location</p>
               <img
@@ -1206,6 +1206,7 @@
                 class="detect"
                 id="detect"
               />
+              <span id="timer"></span>
               <lottie-player
                 class="loading"
                 id="loading"
@@ -1285,7 +1286,7 @@
           </div>
         </section>
         <!-- form submission container -->
-        <!-- <section>
+        <section>
           <div class="enquiry1">
             <div class="sectionHeader">
               <p class="headerText">
@@ -1331,14 +1332,11 @@
                   <div class="checkboxWrapper1">
                     <input type="checkbox" checked="checked" />
                     <p id="displayLessThree">
-                      <span
-                        >I hearby declare that I have read the consent...</span
-                      ><span id="readMoreButton" onclick="readMore3()"
-                        >Read More</span
-                      >
+                      <span class="smallFont">I hearby declare that I have read the consent...</span>
+                      <span class="smallFont" id="readMoreButton" onclick="readMore3()">Read More</span>
                     </p>
                     <div>
-                      <span class="readMore" id="displayMoreThree">
+                      <span class="readMore smallFont" id="displayMoreThree">
                         I hereby declare that I have read the consent and I
                         appoint and allow FINCITY and its Developer partners to
                         call or SMS and/or WhatsApp with details regarding this
@@ -1347,16 +1345,14 @@
                         the contrary that may be contained anywhere, including
                         any registration for DNC/ NDNC.
                       </span>
-                      <span id="readLessButton" onclick="readLess3()"
-                        >Read Less</span
-                      >
+                      <span class="smallFont" id="readLessButton" onclick="readLess3()">Read Less</span>
                     </div>
                   </div>
                 </div>
               </div>
               <button
                 class="enquirBbutton"
-                onclick="openApi(event, true)"
+                onclick="openApi(event,3)"
                 id="enquirBbutton3"
                 type="submit"
               >
@@ -1365,57 +1361,55 @@
               <div id="error"></div>
             </form>
             <form
-              class="otpVerification"
-              id="otpVerification1"
+              class="otpVerification myOtpVerification"
+              id="otpVerification2"
               onsubmit="return false"
             >
-              <div class="section5Header">
+              <div class="sectionHeader">
                 <p class="headerText">
                   <span>Verification Code</span>
                 </p>
               </div>
               <div class="resendText">
-                <span class="numberText1" id="numberText1"
-                  >Please Enter the Verification Code sent to</span
-                >
-                <span class="changeLink" onclick="backMain(event, false)"
-                  >Change</span
+                <span class="numberText2" id="numberText2">
+                  Please Enter the Verification Code sent to</span>
+                <span class="changeLink" onclick="backMain(event, 3)">Change</span
                 >
               </div>
               <div class="inutContainer">
                 <input
                   class="otpInput"
                   maxlength="1"
-                  id="_1st_"
-                  onkeyup="clickEvent(this, '_2nd_')"
+                  id="_1st_3"
+                  onkeyup="clickEvent(this, '_2nd_3')"
                   type="text"
                   onkeydown="moveFocusBack(event)"
                 />
                 <input
                   class="otpInput"
                   maxlength="1"
-                  id="_2nd_"
-                  onkeyup="clickEvent(this, '_3rd_')"
+                  id="_2nd_3"
+                  onkeyup="clickEvent(this, '_3rd_3')"
                   type="text"
                   onkeydown="moveFocusBack(event)"
                 />
                 <input
                   class="otpInput"
                   maxlength="1"
-                  id="_3rd_"
+                  id="_3rd_3"
                   type="text"
-                  onkeyup="clickEvent(this, '_4th_')"
+                  onkeyup="clickEvent(this, '_4th_3')"
                   onkeydown="moveFocusBack(event)"
                 />
                 <input
                   class="otpInput"
                   maxlength="1"
-                  id="_4th_"
+                  id="_4th_3"
                   type="text"
                   onkeydown="moveFocusBack(event)"
                 />
               </div>
-              <div class="boxWrapper">
+              <div class="boxWrapper myBoxWrapper">
                 <p>Don't receive OTP?</p>
                 <p onclick="resendOtp(event, false)" id="resendOtp">
                   Resend OTP
@@ -1423,15 +1417,15 @@
               </div>
               <button
                 class="otpBbutton"
-                id="otpBbutton2"
+                id="otpBbutton3"
                 type="submit"
-                onclick="verfiyOtp(event, false)"
+                onclick="verfiyOtp(event, 3)"
               >
                 Verify
               </button>
               <div id="error"></div>
             </form>
-            <div class="location" id="location1" onsubmit="return false">
+            <div class="location" id="location2" onsubmit="return false">
               <div class="locationSection">
                 <div class="headerModal">
                   <lottie-player
@@ -1451,21 +1445,21 @@
                 </div>
                 <button
                   class="locationButton"
-                  id="locationButton1"
+                  id="locationButton2"
                   type="submit"
-                  onclick="detectLocation(event, false)"
+                  onclick="detectLocation(event, 3)"
                 >
-                  <p class="detectText" id="detectText1">Detect My Location</p>
+                  <p class="detectText" id="detectText2">Detect My Location</p>
                   <img
                     src="assets/images/focus.svg"
                     alt="located"
                     class="detect"
-                    id="detect1"
+                    id="detect2"
                   />
-                  <span id="timer1"></span>
+                  <span id="timer2"></span>
                   <lottie-player
                     class="loading"
-                    id="loading1"
+                    id="loading2"
                     src="assets/images/loading.json"
                     background="transparent"
                     speed="1"
@@ -1477,7 +1471,7 @@
               </div>
             </div>
           </div>
-        </section> -->
+        </section>
         <!-- banner in container -->
         <section
           class="banner-container heading-white"
@@ -1905,14 +1899,22 @@
                           <div class="btn-wrap" style="display: block">
                             <a
                               class="btn btn-orange"
-                              style="background-color: #f6f6f6"
+                              style="background-color: #f6f6f6; display: none;"
                               href="https://livingwalls.in/wp-content/uploads/2022/06/olde-town-mini-brochure-1.pdf"
                               target="_blank"
                               rel="noopener"
-                              id="pdf-download"
+                              id="pdfDownload"
                             >
                               Download Brochure
                             </a>
+                            <div
+                              class="btn btn-orange"
+                              style="background-color: #f6f6f6"
+                              id="pdfDownloadButton"
+                              onclick="openModal()"
+                            >
+                              Download Brochure
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2318,7 +2320,7 @@
               </div>
               <button
                 class="enquirBbutton"
-                onclick="openApi(event, true)"
+                onclick="openApi(event, 2)"
                 id="enquirBbutton2"
                 type="submit"
               >
@@ -2341,7 +2343,7 @@
               <span class="numberText1" id="numberText1"
                 >Please Enter the Verification Code sent to</span
               >
-              <span class="changeLink" onclick="backMain(event, false)"
+              <span class="changeLink" onclick="backMain(event, 2)"
                 >Change</span
               >
             </div>
@@ -2386,7 +2388,7 @@
               class="otpBbutton"
               id="otpBbutton2"
               type="submit"
-              onclick="verfiyOtp(event, false)"
+              onclick="verfiyOtp(event, 2)"
             >
               Verify
             </button>
@@ -2414,7 +2416,7 @@
                 class="locationButton"
                 id="locationButton1"
                 type="submit"
-                onclick="detectLocation(event, false)"
+                onclick="detectLocation(event, 2)"
               >
                 <p class="detectText" id="detectText1">Detect My Location</p>
                 <img

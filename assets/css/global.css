@@ -446,6 +446,11 @@ input[type='checkbox'] {
     padding: 40px 40px 40px 40px;
 }
 
+.otpVerification.myOtpVerification{
+    gap: 30px;
+    padding: 0px 40px;
+}
+
 .otpVerification .section5Header {
     padding-top: 0px !important;
 }
@@ -458,6 +463,10 @@ input[type='checkbox'] {
 .otpVerification .boxWrapper p {
     margin: 0px;
     color: #FFFFFF;
+}
+
+.otpVerification .boxWrapper.myBoxWrapper p {
+    color:#303538;
 }
 
 .otpVerification .boxWrapper p:last-of-type {
@@ -526,6 +535,10 @@ input[type='checkbox'] {
     padding: 0px;
 }
 
+.enquiry1 .locationSection {
+    padding: 0 40px;
+}
+
 .enquiry .otpVerification {
     padding: 0px;
 }
@@ -563,6 +576,9 @@ input[type='checkbox'] {
     margin: 0px;
     color: #FFFFFF;
 }
+.enquiry1 .location p {
+  color:#303538;;
+}
 
 .location button {
     display: flex;
@@ -594,28 +610,34 @@ input[type='checkbox'] {
     margin-bottom: 28px;
 }
 
-
 .enquiry1 {
     margin-top: 100px;
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 0 80px;
+    padding: 0 5%;
+}
+
+.enquiry1 button {
+    width: 280px !important;
 }
 
 .sectionHeader{
     margin: 0;
 }
-.headerText {
+.sectionHeader .headerText {
     font-size: 32px;
+    padding-left: 36px;
 }
 .enquiryMain1{
     width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    gap: 20px;
     align-items: start;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .enquiryMain1 button {
@@ -624,23 +646,27 @@ input[type='checkbox'] {
     width: 280px !important;
   
 }
-.mobileButton {
-  align-self: center;
-  display: none;
-}
-.enquiryMain1 input {
+.enquiryMain1 input:not([type='checkbox']) {
     border: 1px solid #bcbcbc;
     border-radius: 36px;
     width: 280px;
     height: 40px;
 }
+.enquiryMain1 input[type='checkbox'] {
+    margin-top: 6px;
+}
 .enquirySubMain1{
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
     gap: 20px;
+    max-width: 880px;
+}
+.enquirySubMain1 .iti,input {
+    width: 280px;
+    border-radius: 36px;
+    height: 40px;
 }
 .enquirySubSubMain1{
     width: 100%;
@@ -666,12 +692,17 @@ input[type='checkbox'] {
     font-weight: bold;
 }
 
-@media (min-width: 1400px) {
-    .enquiry1 {
-        padding: 0 110px;
+@media (max-width: 980px) {
+    .sectionHeader .headerText {
+      text-align: center;
+    }
+    .enquirySubSubMain1{
+        justify-content: center;
+    }
+    .boxWrapper1 {
+        align-items: center;
     }
 }
-
 
 @media (max-width: 768px) {
 
@@ -706,6 +737,24 @@ input[type='checkbox'] {
     }
 
     .enquiryMain button {
+        width: 100% !important;
+    }
+
+    .enquiry1 {
+        padding: 0 30px !important;
+        gap: 30px !important;
+        align-items: center;
+    }
+
+    .sectionHeader .headerText{
+        padding: 0;
+    }
+
+    .enquiryMain1 button {
+        width: 100% !important;
+    }
+
+    .enquirySubMain1 .iti,input {
         width: 100% !important;
     }
 
