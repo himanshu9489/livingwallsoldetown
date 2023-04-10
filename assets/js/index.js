@@ -149,26 +149,38 @@ function readLess3() {
   document.getElementById("readLessButton").style.display = "none";
 }
 
-function checkInputs(inputs, submitButton) {
-  const anyEmpty = inputs.some((input) => input.value.trim() === "");
+function checkInputs(inputs, submitButton, checkboxInput) {
+  const anyEmpty =
+    inputs.some((input) => input.value.trim() === "") || !checkboxInput.checked;
   submitButton.disabled = anyEmpty;
 }
 
 window.addEventListener(
   "load",
   (event) => {
+    let checkboxs = document.querySelectorAll("input[type='checkbox']");
+
     let form = document.querySelectorAll(
       ".enquirySubMain input:not(input[type='checkbox'])"
     );
     checkInputs(
       [...form].splice(0, 3),
-      document.getElementById("enquirBbutton1")
+      document.getElementById("enquirBbutton1"),
+      checkboxs[0]
     );
-    checkInputs([...form].splice(3), document.getElementById("enquirBbutton2"));
+    checkInputs(
+      [...form].splice(3),
+      document.getElementById("enquirBbutton2"),
+      checkboxs[2]
+    );
 
     let form1 = document.querySelectorAll(".enquirySubSubMain1 input");
 
-    checkInputs([...form1], document.getElementById("enquirBbutton3"));
+    checkInputs(
+      [...form1],
+      document.getElementById("enquirBbutton3"),
+      checkboxs[1]
+    );
 
     let otpForm = document.querySelectorAll(".inutContainer input");
 
@@ -188,18 +200,29 @@ window.addEventListener(
 window.addEventListener(
   "input",
   (event) => {
+    let checkboxs = document.querySelectorAll("input[type='checkbox']");
+
     let form = document.querySelectorAll(
       ".enquirySubMain input:not(input[type='checkbox'])"
     );
     checkInputs(
       [...form].splice(0, 3),
-      document.getElementById("enquirBbutton1")
+      document.getElementById("enquirBbutton1"),
+      checkboxs[0]
     );
-    checkInputs([...form].splice(3), document.getElementById("enquirBbutton2"));
+    checkInputs(
+      [...form].splice(3),
+      document.getElementById("enquirBbutton2"),
+      checkboxs[2]
+    );
 
     let form1 = document.querySelectorAll(".enquirySubSubMain1 input");
 
-    checkInputs([...form1], document.getElementById("enquirBbutton3"));
+    checkInputs(
+      [...form1],
+      document.getElementById("enquirBbutton3"),
+      checkboxs[1]
+    );
 
     let otpForm = document.querySelectorAll(".inutContainer input");
 
