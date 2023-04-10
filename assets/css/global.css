@@ -160,11 +160,11 @@ h1, h2, h3, h4, h5, h6 {
     gap: 20px;
     justify-content: center;
     align-items: center;
-    padding: 60px 40px 20px 40px;
+    padding: 60px 40px 16px 40px;
 }
 
 .innerModalHeader {
-    padding-bottom: 32px;
+    padding-bottom: 12px;
     border-bottom: 1px solid #929496;
 }
 
@@ -322,7 +322,7 @@ button {
     flex-direction: column;
     background-color: #303538;
     gap: 40px 80px;
-    padding: 40px;
+    padding: 40px 40px 60px 40px;
 
 }
 
@@ -788,7 +788,7 @@ input[type='checkbox'] {
     }
 
     .modalHeader {
-            padding: 48px 20px 20px 20px;
+            padding: 48px 20px 16px 20px;
     }
 
     .modalMain {
