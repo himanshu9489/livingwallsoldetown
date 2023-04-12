@@ -154,6 +154,10 @@ function checkInputs(inputs, submitButton, checkboxInput) {
     inputs.some((input) => input.value.trim() === "") || !checkboxInput.checked;
   submitButton.disabled = anyEmpty;
 }
+function checkInputs1(inputs, submitButton) {
+  const anyEmpty = inputs.some((input) => input.value.trim() === "");
+  submitButton.disabled = anyEmpty;
+}
 
 window.addEventListener(
   "load",
@@ -184,15 +188,18 @@ window.addEventListener(
 
     let otpForm = document.querySelectorAll(".inutContainer input");
 
-    checkInputs(
+    checkInputs1(
       [...otpForm].splice(0, 4),
       document.getElementById("otpBbutton1")
     );
-    checkInputs(
+    checkInputs1(
       [...otpForm].splice(4, 4),
       document.getElementById("otpBbutton3")
     );
-    checkInputs([...otpForm].splice(8), document.getElementById("otpBbutton2"));
+    checkInputs1(
+      [...otpForm].splice(8),
+      document.getElementById("otpBbutton2")
+    );
   },
   false
 );
@@ -226,15 +233,18 @@ window.addEventListener(
 
     let otpForm = document.querySelectorAll(".inutContainer input");
 
-    checkInputs(
+    checkInputs1(
       [...otpForm].splice(0, 4),
       document.getElementById("otpBbutton1")
     );
-    checkInputs(
+    checkInputs1(
       [...otpForm].splice(4, 4),
       document.getElementById("otpBbutton3")
     );
-    checkInputs([...otpForm].splice(8), document.getElementById("otpBbutton2"));
+    checkInputs1(
+      [...otpForm].splice(8),
+      document.getElementById("otpBbutton2")
+    );
   },
   false
 );
