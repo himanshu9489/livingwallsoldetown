@@ -249,15 +249,8 @@ window.addEventListener(
   false
 );
 
-//---- add call button slide effect---//
-window.addEventListener("load", (event) => {
-  setTimeout(() => {
-    document.getElementById("callButton").style.display = "flex";
-  }, 100);
-});
-
 // --- observer implementation---- //
-let target = document.querySelector(".enquiry1");
+let target = document.querySelector(".observerTarget");
 let topTarget = document.querySelector(".project-banner");
 const callIcon = document.querySelector(".buttonDiv .callIcon");
 const btnDiv = document.querySelector(".buttonDiv");
@@ -288,6 +281,17 @@ const myobserver = new IntersectionObserver(
         btnDiv.addEventListener("mouseenter", show);
         btnDiv.addEventListener("mouseleave", hide);
       }
+    });
+  },
+  {
+    threshold: 0.02,
+  }
+);
+const myobserver1 = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+
       if (entry.target === topTarget) {
         show();
         btnDiv.removeEventListener("mouseenter", show);
@@ -300,8 +304,8 @@ const myobserver = new IntersectionObserver(
   }
 );
 
-myobserver.observe(topTarget);
 myobserver.observe(target);
+myobserver1.observe(topTarget);
 
 //--- implement modal for form submission ---//
 

@@ -52,6 +52,10 @@ h6 {
   font-weight: 400;
 }
 
+.detailed-plan-box {
+  height: 750px;
+}
+
 .enquirBbutton:disabled {
   cursor: not-allowed !important;
   background-color: #919191 !important;
@@ -67,28 +71,37 @@ h6 {
   pointer-events: none;
 }
 
+.book_now {
+  cursor: pointer;
+  width: 150px;
+  padding: 10px 30px;
+  background-color: #d75e35;
+  color: #ffffff;
+  border-radius: 324px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .buttonDiv {
   background-color: #d75e35;
-  display: none;
   position: fixed;
   top: 100px;
-  align-items: center;
   z-index: 20;
-  animation-name: callButton;
-  animation-duration: 1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
   border-top-left-radius: 324px;
   border-bottom-left-radius: 324px;
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 20px;
   font-size: 20px;
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
   width: max-content;
   padding-right: 30px;
+  animation-duration: 1s;
+  animation-name: callButton;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
   transition: transform 1s, background-color 1s, border-radius 1s;
   transition-timing-function: ease-out;
 }
@@ -120,6 +133,7 @@ h6 {
   align-items: center;
   animation: tilt-shaking 0.3s infinite;
 }
+
 @keyframes tilt-shaking {
   0% {
     transform: rotate(0deg);
@@ -223,6 +237,7 @@ button:not(.location button) {
   display: none;
   cursor: pointer;
 }
+
 #readLessButton {
   display: none;
   cursor: pointer;
@@ -380,6 +395,7 @@ input[type="checkbox"] {
   color: white;
   font-size: 12px;
 }
+
 .checkboxWrapper span {
   color: white;
   font-size: 12px;
@@ -567,6 +583,7 @@ input[type="checkbox"] {
   margin: 0px;
   color: #ffffff;
 }
+
 .enquiry1 .location p {
   color: #303538;
 }
@@ -589,12 +606,13 @@ input[type="checkbox"] {
   0% {
     transform: scale(1);
   }
+
   50% {
-    transform:scale(0.8);
+    transform: scale(0.8);
   }
-  
+
   100% {
-    transform:scale(1);
+    transform: scale(1);
   }
 }
 
@@ -633,10 +651,12 @@ input[type="checkbox"] {
 .sectionHeader {
   margin: 0;
 }
+
 .sectionHeader .headerText {
   font-size: 32px;
   padding-left: 36px;
 }
+
 .enquiryMain1 {
   width: 100%;
   display: flex;
@@ -652,15 +672,18 @@ input[type="checkbox"] {
   color: #ffffff;
   width: 280px !important;
 }
+
 .enquiryMain1 input:not([type="checkbox"]) {
   border: 1px solid #bcbcbc;
   border-radius: 36px;
   width: 280px;
   height: 40px;
 }
+
 .enquiryMain1 input[type="checkbox"] {
   margin-top: 6px;
 }
+
 .enquirySubMain1 {
   display: flex;
   flex-direction: column;
@@ -669,12 +692,14 @@ input[type="checkbox"] {
   gap: 20px;
   max-width: 880px;
 }
+
 .enquirySubMain1 .iti,
 input {
   width: 280px;
   border-radius: 36px;
   height: 40px;
 }
+
 .enquirySubSubMain1 {
   width: 100%;
   display: flex;
@@ -682,6 +707,7 @@ input {
   gap: 20px;
   flex-wrap: wrap;
 }
+
 .boxWrapper1 {
   display: flex;
   flex-direction: column;
@@ -689,6 +715,7 @@ input {
   align-items: start;
   width: 100%;
 }
+
 .checkboxWrapper1 {
   display: flex;
   gap: 5px;
@@ -712,9 +739,11 @@ input {
   .sectionHeader .headerText {
     text-align: center;
   }
+
   .enquirySubSubMain1 {
     justify-content: center;
   }
+
   .boxWrapper1 {
     align-items: center;
   }
@@ -820,9 +849,11 @@ input {
   input {
     width: 100% !important;
   }
+
   .my-detailed-plan-inner {
     padding: 0;
   }
+
   .my-detailed-plan-right {
     padding-right: 20px;
   }

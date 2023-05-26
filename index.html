@@ -648,8 +648,8 @@
     </script>
 
     <!-- Google tag (gtag.js) ends -->
-     <!-- ms clarity -->
-     <script type="text/javascript">
+    <!-- ms clarity -->
+    <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
         c[a] =
           c[a] ||
@@ -666,7 +666,7 @@
       })(window, document, "clarity", "script", "gk9tdqjo67");
     </script>
     <!-- ms clarity ends -->
-    
+
     <script src="assets/js/index.js" defer id="index-js"></script>
     <script defer src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script
@@ -1102,8 +1102,11 @@
               <input type="checkbox" checked="checked" title="checkbox" />
               <span class="checkmark"></span>
               <p class="readLess" id="read">
-                <span class="smallFont">I hearby declare that I have read the consent...</span
-                ><span class="smallFont" id="readLess" onclick="readMore()">Read More</span>
+                <span class="smallFont"
+                  >I hearby declare that I have read the consent...</span
+                ><span class="smallFont" id="readLess" onclick="readMore()"
+                  >Read More</span
+                >
               </p>
               <div class="readMoreScroll">
                 <span class="readMore smallFont" id="displayMore">
@@ -1114,7 +1117,9 @@
                   future, notwithstanding anything to the contrary that may be
                   contained anywhere, including any registration for DNC/ NDNC.
                 </span>
-                <span class="smallFont" id="readLess2" onclick="readLess2()">Read Less</span>
+                <span class="smallFont" id="readLess2" onclick="readLess2()"
+                  >Read Less</span
+                >
               </div>
             </div>
           </div>
@@ -1142,9 +1147,7 @@
             <span class="numberText" id="numberText"
               >Please Enter the Verification Code sent to</span
             >
-            <span class="changeLink" onclick="backMain(event, 1)"
-              >Change</span
-            >
+            <span class="changeLink" onclick="backMain(event, 1)">Change</span>
           </div>
           <div class="inutContainer">
             <input
@@ -1291,655 +1294,683 @@
                       <p>Deliberately Modern 3BHK Flats in Jayamahal.</p>
                     </div>
                     <h5>Starting at &#8377;3.99 Crore</h5>
+                    <div class="book_now" onclick="openModal()">Book Now</div>
+                  </div>
+                  <div class="bottom-code" style="bottom: -40px">
+                    <p class="mb-0" style="font-size: 13px">
+                      RERA No. PRM/KA/RERA/1251/446/PR/070622/004966
+                    </p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="bottom-code">
-              <p class="mb-0">RERA No. PRM/KA/RERA/1251/446/PR/070622/004966</p>
             </div>
             <div class="project-banner-image">
-              <img
+              <!-- <img
                 data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/project-banner.jpg"
-                src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                src="./project-banner.png"
                 class="br-lazy"
-              />
+              /> -->
+              <img src="./project-banner.png" />
             </div>
           </div>
         </section>
-        <!-- form submission container -->
-        <section>
-          <div class="enquiry1">
-            <div class="sectionHeader">
-              <p class="headerText">
-                <span>GET IN TOUCH</span>
-              </p>
-            </div>
-            <form
-              class="enquiryMain1"
-              id="enquiryMain1"
-              onsubmit="return false"
-              action="#"
-            >
-              <div class="enquirySubMain1">
-                <div class="enquirySubSubMain1">
-                  <input
-                    type="text"
-                    name="name1"
-                    id="name1"
-                    placeholder="Name"
-                    required
-                    style="padding: 20px"
-                  />
-                  <input
-                    type="tel"
-                    onclick="this.setSelectionRange(0, this.value.length)"
-                    name="phone1"
-                    id="phone1"
-                    placeholder="Mobile Number"
-                    maxlength="10"
-                    required
-                    class="inputPhone"
-                  />
-                  <input
-                    type="email"
-                    name="email1"
-                    id="email1"
-                    placeholder="Email Address"
-                    required
-                    style="padding: 20px"
-                  />
-                </div>
-                <div class="boxWrapper1">
-                  <div class="checkboxWrapper1">
-                    <input type="checkbox" checked="checked" />
-                    <p id="displayLessThree">
-                      <span class="smallFont">I hearby declare that I have read the consent...</span>
-                      <span class="smallFont" id="readMoreButton" onclick="readMore3()">Read More</span>
-                    </p>
-                    <div>
-                      <span class="readMore smallFont" id="displayMoreThree">
-                        I hereby declare that I have read the consent and I
-                        appoint and allow FINCITY and its Developer partners to
-                        call or SMS and/or WhatsApp with details regarding this
-                        project or any other projects including new launches
-                        from time to time in future, notwithstanding anything to
-                        the contrary that may be contained anywhere, including
-                        any registration for DNC/ NDNC.
-                      </span>
-                      <span class="smallFont" id="readLessButton" onclick="readLess3()">Read Less</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <button
-                class="enquirBbutton"
-                onclick="openApi(event,3)"
-                id="enquirBbutton3"
-                type="submit"
-              >
-                Get More Information
-              </button>
-              <div id="error"></div>
-            </form>
-            <form
-              class="otpVerification myOtpVerification"
-              id="otpVerification2"
-              onsubmit="return false"
-            >
+        <div class="observerTarget">
+          <!-- form submission container -->
+          <section id="enquiry_form_1">
+            <div class="enquiry1">
               <div class="sectionHeader">
                 <p class="headerText">
-                  <span>Verification Code</span>
+                  <span>GET IN TOUCH</span>
                 </p>
               </div>
-              <div class="resendText">
-                <span class="numberText2" id="numberText2">
-                  Please Enter the Verification Code sent to</span>
-                <span class="changeLink" onclick="backMain(event, 3)">Change</span
-                >
-              </div>
-              <div class="inutContainer">
-                <input
-                  class="otpInput"
-                  maxlength="1"
-                  id="_1st_3"
-                  onkeyup="clickEvent(this, '_2nd_3')"
-                  type="text"
-                  onkeydown="moveFocusBack(event)"
-                  inputmode="numeric"
-                />
-                <input
-                  class="otpInput"
-                  maxlength="1"
-                  id="_2nd_3"
-                  onkeyup="clickEvent(this, '_3rd_3')"
-                  type="text"
-                  onkeydown="moveFocusBack(event)"
-                  inputmode="numeric"
-                />
-                <input
-                  class="otpInput"
-                  maxlength="1"
-                  id="_3rd_3"
-                  type="text"
-                  onkeyup="clickEvent(this, '_4th_3')"
-                  onkeydown="moveFocusBack(event)"
-                  inputmode="numeric"
-                />
-                <input
-                  class="otpInput"
-                  maxlength="1"
-                  id="_4th_3"
-                  type="text"
-                  onkeydown="moveFocusBack(event)"
-                  inputmode="numeric"
-                />
-              </div>
-              <div class="boxWrapper myBoxWrapper">
-                <p>Don't receive OTP?</p>
-                <p onclick="resendOtp(event, false)" id="resendOtp">
-                  Resend OTP
-                </p>
-              </div>
-              <button
-                class="otpBbutton"
-                id="otpBbutton3"
-                type="submit"
-                onclick="verfiyOtp(event, 3)"
+              <form
+                class="enquiryMain1"
+                id="enquiryMain1"
+                onsubmit="return false"
+                action="#"
               >
-                Verify
-              </button>
-              <div id="error"></div>
-            </form>
-            <div class="location" id="location2" onsubmit="return false">
-              <div class="locationSection">
-                <div class="headerModal">
-                  <lottie-player
-                    title="marker"
-                    background="transparent"
-                    src="assets/marker-lottie.json"
-                    speed="1"
-                    style="width: 150px; height: 150px"
-                    autoplay
-                    loop
-                  ></lottie-player>
-                </div>
-                <div class="consentText">
-                  <p class="ThankYou">Thank You!</p>
-                  <p id="serveBetter">To Serve you better</p>
-                  <p class="shareLocation">Please Share your Location</p>
+                <div class="enquirySubMain1">
+                  <div class="enquirySubSubMain1">
+                    <input
+                      type="text"
+                      name="name1"
+                      id="name1"
+                      placeholder="Name"
+                      required
+                      style="padding: 20px"
+                    />
+                    <input
+                      type="tel"
+                      onclick="this.setSelectionRange(0, this.value.length)"
+                      name="phone1"
+                      id="phone1"
+                      placeholder="Mobile Number"
+                      maxlength="10"
+                      required
+                      class="inputPhone"
+                    />
+                    <input
+                      type="email"
+                      name="email1"
+                      id="email1"
+                      placeholder="Email Address"
+                      required
+                      style="padding: 20px"
+                    />
+                  </div>
+                  <div class="boxWrapper1">
+                    <div class="checkboxWrapper1">
+                      <input type="checkbox" checked="checked" />
+                      <p id="displayLessThree">
+                        <span class="smallFont"
+                          >I hearby declare that I have read the
+                          consent...</span
+                        >
+                        <span
+                          class="smallFont"
+                          id="readMoreButton"
+                          onclick="readMore3()"
+                          >Read More</span
+                        >
+                      </p>
+                      <div>
+                        <span class="readMore smallFont" id="displayMoreThree">
+                          I hereby declare that I have read the consent and I
+                          appoint and allow FINCITY and its Developer partners
+                          to call or SMS and/or WhatsApp with details regarding
+                          this project or any other projects including new
+                          launches from time to time in future, notwithstanding
+                          anything to the contrary that may be contained
+                          anywhere, including any registration for DNC/ NDNC.
+                        </span>
+                        <span
+                          class="smallFont"
+                          id="readLessButton"
+                          onclick="readLess3()"
+                          >Read Less</span
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <button
-                  class="locationButton"
-                  id="locationButton2"
+                  class="enquirBbutton"
+                  onclick="openApi(event,3)"
+                  id="enquirBbutton3"
                   type="submit"
-                  onclick="detectLocation(event, 3)"
                 >
-                  <p class="detectText" id="detectText2">Detect My Location</p>
-                  <img
-                    src="assets/images/focus.svg"
-                    alt="located"
-                    class="detect"
-                    id="detect2"
-                  />
-                  <span id="timer2"></span>
-                  <lottie-player
-                    class="loading"
-                    id="loading2"
-                    src="assets/images/loading.json"
-                    background="transparent"
-                    speed="1"
-                    autoplay
-                    loop
-                    style="width: 50px; height: 50px"
-                  ></lottie-player>
+                  Get More Information
                 </button>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- banner in container -->
-        <section
-          class="banner-container heading-white"
-          style="margin-top: 100px"
-        >
-          <div class="container">
-            <div class="banner-container-heading">
-              <div class="heading-content">
-                <h2>Designed for a select few.</h2>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-12">
-                <img
-                  width="2560"
-                  height="1969"
-                  alt=""
-                  decoding="async"
-                  loading="lazy"
-                  data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-scaled.jpg"
-                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202560%201969'%3E%3C/svg%3E"
-                  class="attachment-full size-full br-lazy"
-                  data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-scaled.jpg 2560w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-300x231.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-1024x788.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-768x591.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-1536x1181.jpg 1536w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-2048x1575.jpg 2048w"
-                  data-brsizes="(max-width: 2560px) 100vw, 2560px"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="content-layout1">
-          <div class="container">
-            <div class="three-column-content-layout-row">
-              <div class="row gx-0">
-                <div class="col-lg-5 col-md-8">
-                  <div class="simple-text">
-                    After building homes for Bangalore's IT professionals, we
-                    realised there was an opportunity to serve a different kind
-                    of customer. People who own businessses in the city centre
-                    and industrialists with factories around Peenya have limited
-                    access to suitable modern apartments in the quaint older
-                    localities around the central business district.
-                  </div>
+                <div id="error"></div>
+              </form>
+              <form
+                class="otpVerification myOtpVerification"
+                id="otpVerification2"
+                onsubmit="return false"
+              >
+                <div class="sectionHeader">
+                  <p class="headerText">
+                    <span>Verification Code</span>
+                  </p>
                 </div>
-                <div class="col-lg-3 col-md-4">
-                  <div class="heading-text-row">
-                    <div class="inner-content">
-                      <h5>14 apartments</h5>
-                      <div class="content-text">
-                        A deliberately small community
-                      </div>
+                <div class="resendText">
+                  <span class="numberText2" id="numberText2">
+                    Please Enter the Verification Code sent to</span
+                  >
+                  <span class="changeLink" onclick="backMain(event, 3)"
+                    >Change</span
+                  >
+                </div>
+                <div class="inutContainer">
+                  <input
+                    class="otpInput"
+                    maxlength="1"
+                    id="_1st_3"
+                    onkeyup="clickEvent(this, '_2nd_3')"
+                    type="text"
+                    onkeydown="moveFocusBack(event)"
+                    inputmode="numeric"
+                  />
+                  <input
+                    class="otpInput"
+                    maxlength="1"
+                    id="_2nd_3"
+                    onkeyup="clickEvent(this, '_3rd_3')"
+                    type="text"
+                    onkeydown="moveFocusBack(event)"
+                    inputmode="numeric"
+                  />
+                  <input
+                    class="otpInput"
+                    maxlength="1"
+                    id="_3rd_3"
+                    type="text"
+                    onkeyup="clickEvent(this, '_4th_3')"
+                    onkeydown="moveFocusBack(event)"
+                    inputmode="numeric"
+                  />
+                  <input
+                    class="otpInput"
+                    maxlength="1"
+                    id="_4th_3"
+                    type="text"
+                    onkeydown="moveFocusBack(event)"
+                    inputmode="numeric"
+                  />
+                </div>
+                <div class="boxWrapper myBoxWrapper">
+                  <p>Don't receive OTP?</p>
+                  <p onclick="resendOtp(event, false)" id="resendOtp">
+                    Resend OTP
+                  </p>
+                </div>
+                <button
+                  class="otpBbutton"
+                  id="otpBbutton3"
+                  type="submit"
+                  onclick="verfiyOtp(event, 3)"
+                >
+                  Verify
+                </button>
+                <div id="error"></div>
+              </form>
+              <div class="location" id="location2" onsubmit="return false">
+                <div class="locationSection">
+                  <div class="headerModal">
+                    <lottie-player
+                      title="marker"
+                      background="transparent"
+                      src="assets/marker-lottie.json"
+                      speed="1"
+                      style="width: 150px; height: 150px"
+                      autoplay
+                      loop
+                    ></lottie-player>
+                  </div>
+                  <div class="consentText">
+                    <p class="ThankYou">Thank You!</p>
+                    <p id="serveBetter">To Serve you better</p>
+                    <p class="shareLocation">Please Share your Location</p>
+                  </div>
+                  <button
+                    class="locationButton"
+                    id="locationButton2"
+                    type="submit"
+                    onclick="detectLocation(event, 3)"
+                  >
+                    <p class="detectText" id="detectText2">
+                      Detect My Location
+                    </p>
+                    <img
+                      src="assets/images/focus.svg"
+                      alt="located"
+                      class="detect"
+                      id="detect2"
+                    />
+                    <span id="timer2"></span>
+                    <lottie-player
+                      class="loading"
+                      id="loading2"
+                      src="assets/images/loading.json"
+                      background="transparent"
+                      speed="1"
+                      autoplay
+                      loop
+                      style="width: 50px; height: 50px"
+                    ></lottie-player>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- banner in container -->
+          <section
+            class="banner-container heading-white"
+            style="margin-top: 100px"
+          >
+            <div class="container">
+              <div class="banner-container-heading">
+                <div class="heading-content">
+                  <h2>Designed for a select few.</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <img
+                    width="2560"
+                    height="1969"
+                    alt=""
+                    decoding="async"
+                    loading="lazy"
+                    data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-scaled.jpg"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%202560%201969'%3E%3C/svg%3E"
+                    class="attachment-full size-full br-lazy"
+                    data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-scaled.jpg 2560w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-300x231.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-1024x788.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-768x591.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-1536x1181.jpg 1536w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-2048x1575.jpg 2048w"
+                    data-brsizes="(max-width: 2560px) 100vw, 2560px"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="content-layout1">
+            <div class="container">
+              <div class="three-column-content-layout-row">
+                <div class="row gx-0">
+                  <div class="col-lg-5 col-md-8">
+                    <div class="simple-text">
+                      After building homes for Bangalore's IT professionals, we
+                      realised there was an opportunity to serve a different
+                      kind of customer. People who own businessses in the city
+                      centre and industrialists with factories around Peenya
+                      have limited access to suitable modern apartments in the
+                      quaint older localities around the central business
+                      district.
                     </div>
-                    <div class="inner-content">
-                      <h5>Work Pods</h5>
-                      <div class="content-text">
-                        Optional detached private offices
-                      </div>
-                    </div>
                   </div>
-                </div>
-                <div class="col-lg-4 col-md-8">
-                  <div class="colored-text">
-                    You love the charm of old Bangalore, boldly call it home for
-                    the next few decades.
-                  </div>
-                </div>
-                <div class="col-lg-8 col-md-8">
-                  <div class="grey-text-wrap">
-                    <h4>
-                      Jayamahal and Nandidurg Road are warmly associated with
-                      old Bangalore's rich history.
-                    </h4>
-                  </div>
-                </div>
-                <div class="col-lg-4 col-md-4">
-                  <div class="text">
-                    The added consideration is your daily commute. If your
-                    business, factory or store is optimally accessible from
-                    Jayamahal, then half your decision is taken.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="custom-iframe">
-          <div class="iframe-heading">
-            Tucked away in <span>Jayamahal</span>
-          </div>
-          <div class="iframe-container">
-            <iframe
-              id="360"
-              src="https://livingwalls.in/wp-content/themes/living-walls/assets/360/location-v1/index.htm"
-              scrolling="no"
-              width="100%"
-              title="Tucked away in Jayamahal"
-            ></iframe>
-          </div>
-        </section>
-        <section class="content-layout2">
-          <div class="container">
-            <div class="three-column-content-layout-row">
-              <div class="row gx-0">
-                <div class="col-lg-12 col-md-6">
-                  <div class="heading-content-repeat">
-                    <div class="row">
-                      <div class="col-lg-4">
-                        <div class="heading-and-content">
-                          <h4>5km from CBD</h4>
-                          <p>If you own stores in the CBD</p>
+                  <div class="col-lg-3 col-md-4">
+                    <div class="heading-text-row">
+                      <div class="inner-content">
+                        <h5>14 apartments</h5>
+                        <div class="content-text">
+                          A deliberately small community
                         </div>
                       </div>
-                      <div class="col-lg-4">
-                        <div class="heading-and-content">
-                          <h4>12km from Peenya</h4>
-                          <p>If you drive to your factory everyday</p>
-                        </div>
-                      </div>
-                      <div class="col-lg-4">
-                        <div class="heading-and-content">
-                          <h4>7km from Manyata</h4>
-                          <p>For our IT/ITES customers</p>
+                      <div class="inner-content">
+                        <h5>Work Pods</h5>
+                        <div class="content-text">
+                          Optional detached private offices
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-lg-12 col-md-6">
-                  <div class="color-heading-content">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-12 col-12">
-                        <div class="color-heading">
-                          <h2>It&rsquo;s Jayamahal. Do we need to say more?</h2>
-                        </div>
-                      </div>
-                      <div class="col-lg-8 col-md-12 col-12">
-                        <div class="color-content">
-                          <h6>
-                            &lsquo;Livingwalls Olde Town' is tucked away in the
-                            familiar upmarket locale of Jayamahal. Jayamahal has
-                            long been sought after as a quiet residential area.
-                            The property we have handpicked in Jayamahal is best
-                            suited to serve a small community of residents.
-                          </h6>
-                        </div>
-                      </div>
+                  <div class="col-lg-4 col-md-8">
+                    <div class="colored-text">
+                      You love the charm of old Bangalore, boldly call it home
+                      for the next few decades.
+                    </div>
+                  </div>
+                  <div class="col-lg-8 col-md-8">
+                    <div class="grey-text-wrap">
+                      <h4>
+                        Jayamahal and Nandidurg Road are warmly associated with
+                        old Bangalore's rich history.
+                      </h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-4 col-md-4">
+                    <div class="text">
+                      The added consideration is your daily commute. If your
+                      business, factory or store is optimally accessible from
+                      Jayamahal, then half your decision is taken.
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <!-- banner in container -->
-        <section class="banner-container heading-black">
-          <div class="container">
-            <div class="banner-container-heading">
-              <div class="heading-content">
-                <h2>Deliberately modern</h2>
-              </div>
+          </section>
+          <section class="custom-iframe">
+            <div class="iframe-heading">
+              Tucked away in <span>Jayamahal</span>
             </div>
-            <div class="row">
-              <div class="col-12">
-                <img
-                  width="1290"
-                  height="979"
-                  alt=""
-                  decoding="async"
-                  loading="lazy"
-                  data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2.jpg"
-                  src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201290%20979'%3E%3C/svg%3E"
-                  class="attachment-full size-full br-lazy"
-                  data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2.jpg 1290w, https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2-300x228.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2-1024x777.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2-768x583.jpg 768w"
-                  data-brsizes="(max-width: 1290px) 100vw, 1290px"
-                />
-              </div>
+            <div class="iframe-container">
+              <iframe
+                id="360"
+                src="https://livingwalls.in/wp-content/themes/living-walls/assets/360/location-v1/index.htm"
+                scrolling="no"
+                width="100%"
+                title="Tucked away in Jayamahal"
+              ></iframe>
             </div>
-          </div>
-        </section>
-        <section class="content-layout1 no-grey-content">
-          <div class="container">
-            <div class="three-column-content-layout-row">
-              <div class="row gx-0 gx-md-1 gx-lg-0">
-                <div class="col-lg-8 col-md-7">
-                  <div class="row">
-                    <div class="col-lg-7 col-md-12">
-                      <div class="simple-text">
-                        The apartment development is deliberately modern, and
-                        the unapologetic lines of the building are intentional.
-                        The slatted front facade in corten steel adds to this
-                        aesthetic. As a material choice, corten steel is a
-                        resilient form of steel that ages well.
+          </section>
+          <section class="content-layout2">
+            <div class="container">
+              <div class="three-column-content-layout-row">
+                <div class="row gx-0">
+                  <div class="col-lg-12 col-md-6">
+                    <div class="heading-content-repeat">
+                      <div class="row">
+                        <div class="col-lg-4">
+                          <div class="heading-and-content">
+                            <h4>5km from CBD</h4>
+                            <p>If you own stores in the CBD</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="heading-and-content">
+                            <h4>12km from Peenya</h4>
+                            <p>If you drive to your factory everyday</p>
+                          </div>
+                        </div>
+                        <div class="col-lg-4">
+                          <div class="heading-and-content">
+                            <h4>7km from Manyata</h4>
+                            <p>For our IT/ITES customers</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="col-lg-5 col-md-12">
-                      <div class="heading-text-row">
-                        <div class="inner-content">
-                          <div class="content-text">
-                            Coming inside, the &lsquo;Open Plan Blueprint&rsquo;
-                            aims to repackage the familiar flavour of an
-                            independent house with a living area that opens into
-                            a garden.
+                  </div>
+                  <div class="col-lg-12 col-md-6">
+                    <div class="color-heading-content">
+                      <div class="row">
+                        <div class="col-lg-4 col-md-12 col-12">
+                          <div class="color-heading">
+                            <h2>
+                              It&rsquo;s Jayamahal. Do we need to say more?
+                            </h2>
+                          </div>
+                        </div>
+                        <div class="col-lg-8 col-md-12 col-12">
+                          <div class="color-content">
+                            <h6>
+                              &lsquo;Livingwalls Olde Town' is tucked away in
+                              the familiar upmarket locale of Jayamahal.
+                              Jayamahal has long been sought after as a quiet
+                              residential area. The property we have handpicked
+                              in Jayamahal is best suited to serve a small
+                              community of residents.
+                            </h6>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-5">
-                  <div class="colored-text">
-                    Recapture the charm of living in an independent house with a
-                    garden.
-                  </div>
-                </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="image-content-layout1">
-          <div class="container">
-            <div class="image-content-wrap">
+          </section>
+          <!-- banner in container -->
+          <section class="banner-container heading-black">
+            <div class="container">
+              <div class="banner-container-heading">
+                <div class="heading-content">
+                  <h2>Deliberately modern</h2>
+                </div>
+              </div>
               <div class="row">
-                <div
-                  class="col-xl-5 col-lg-4 col-md-5 col-12 d-none d-lg-block d-md-none"
-                >
-                  <div class="layout-image">
-                    <img
-                      width="640"
-                      height="493"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-768x591.jpg"
-                      src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20493'%3E%3C/svg%3E"
-                      class="attachment-medium_large size-medium_large br-lazy"
-                      data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-768x591.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-300x231.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-1024x788.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-1536x1181.jpg 1536w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-2048x1575.jpg 2048w"
-                      data-brsizes="(max-width: 640px) 100vw, 640px"
-                    />
-                  </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-7 col-12">
-                  <div class="layout-image layout1-image-small">
-                    <img
-                      width="300"
-                      height="300"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel-300x300.jpg"
-                      src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
-                      class="attachment-medium size-medium br-lazy"
-                      data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel-300x300.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel-150x150.jpg 150w, https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel-768x768.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel.jpg 805w"
-                      data-brsizes="(max-width: 300px) 100vw, 300px"
-                    />
-                  </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-5 col-12">
-                  <div class="layout-content">
-                    <h5>Corten Steel Facade</h5>
-                    <p>
-                      The modern slatted frontage built with Corten Steel will
-                      weather well
-                    </p>
-                  </div>
+                <div class="col-12">
+                  <img
+                    width="1290"
+                    height="979"
+                    alt=""
+                    decoding="async"
+                    loading="lazy"
+                    data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2.jpg"
+                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201290%20979'%3E%3C/svg%3E"
+                    class="attachment-full size-full br-lazy"
+                    data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2.jpg 1290w, https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2-300x228.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2-1024x777.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/06/content-banner-2-768x583.jpg 768w"
+                    data-brsizes="(max-width: 1290px) 100vw, 1290px"
+                  />
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="image-content-layout4">
-          <div class="container">
-            <div class="image-content-wrap">
-              <div class="row">
-                <div
-                  class="col-xl-3 col-lg-4 col-md-6 col-12 order-2 order-md-2 order-lg-1 offset-xl-5 offset-lg-4"
-                >
-                  <div class="layout-content">
-                    <h5>Two Basement Levels</h5>
-                    <p>
-                      The building has two basement levels. Each apartment has
-                      two dedicated car parks.
-                    </p>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-4 col-md-6 col-12 order-1 order-md-2 order-lg-2"
-                >
-                  <div class="left-plus layout-image">
-                    <img
-                      width="300"
-                      height="201"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/image-8-300x201.jpg"
-                      src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20201'%3E%3C/svg%3E"
-                      class="attachment-medium size-medium br-lazy"
-                      data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/image-8-300x201.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/image-8.jpg 640w"
-                      data-brsizes="(max-width: 300px) 100vw, 300px"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="image-content-layout5">
-          <div class="container">
-            <div class="image-content-wrap">
-              <div class="row gx-5 gx-md-4 gx-lg-4">
-                <div class="col-xl-8 col-lg-8 col-md-7 col-12">
-                  <div class="left-plus layout-image">
-                    <img
-                      width="640"
-                      height="227"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/image-9-768x272.jpg"
-                      src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20227'%3E%3C/svg%3E"
-                      class="attachment-medium_large size-medium_large br-lazy"
-                      data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/image-9-768x272.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/06/image-9-300x106.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/image-9.jpg 848w"
-                      data-brsizes="(max-width: 640px) 100vw, 640px"
-                    />
-                  </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-5 col-12">
-                  <div class="layout-content">
-                    <h5>Rooftop swimming pool</h5>
-                    <p>Placed for the best privacy</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="image-content-layout2">
-          <div class="container">
-            <div class="image-content-wrap">
-              <div class="row gx-lg-4 gx-md-5 gx-sm-0 gx-0">
-                <div
-                  class="col-xl-3 col-lg-4 col-md-6 col-12 offset-xl-2 offset-lg-0 order-2 order-md-1 order-lg-1"
-                >
-                  <div class="layout-content">
-                    <h5>Balcony Gardens</h5>
-                    <p>Your private garden</p>
-                  </div>
-                </div>
-                <div
-                  class="col-xl-3 col-lg-4 col-md-6 col-12 order-1 order-md-2 order-lg-2"
-                >
-                  <div class="left-plus layout-image">
-                    <img
-                      width="300"
-                      height="300"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      data-breeze="https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-300x300.jpg"
-                      src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
-                      class="attachment-medium size-medium br-lazy"
-                      data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-300x300.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-1024x1024.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-150x150.jpg 150w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-768x768.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-1536x1536.jpg 1536w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-2048x2048.jpg 2048w"
-                      data-brsizes="(max-width: 300px) 100vw, 300px"
-                    />
-                  </div>
-                </div>
-                <div
-                  class="col-xl-4 col-lg-4 col-md-5 col-12 order-2 order-md-2 order-lg-3 d-none d-lg-block d-md-none"
-                >
-                  <div class="layout-image">
-                    <img
-                      width="640"
-                      height="640"
-                      alt=""
-                      decoding="async"
-                      loading="lazy"
-                      data-breeze="https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-768x768.jpg"
-                      src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20640'%3E%3C/svg%3E"
-                      class="attachment-medium_large size-medium_large br-lazy"
-                      data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-768x768.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-300x300.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-1024x1024.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-150x150.jpg 150w, https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama.jpg 1400w"
-                      data-brsizes="(max-width: 640px) 100vw, 640px"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- download pdf form -->
-        <section class="download-brochure">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-8 order-lg-1 order-2 order-md-2">
-                <div class="download-brochure-content">
-                  <div class="row">
-                    <div
-                      class="col-lg-6 col-md-12 order-lg-1 order-1 order-md-1"
-                    >
-                      <div class="contact-form-main-heading">
-                        <h3>
-                          If you are in a hurry, download a PDF Brochure instead
-                        </h3>
+          </section>
+          <section class="content-layout1 no-grey-content">
+            <div class="container">
+              <div class="three-column-content-layout-row">
+                <div class="row gx-0 gx-md-1 gx-lg-0">
+                  <div class="col-lg-8 col-md-7">
+                    <div class="row">
+                      <div class="col-lg-7 col-md-12">
+                        <div class="simple-text">
+                          The apartment development is deliberately modern, and
+                          the unapologetic lines of the building are
+                          intentional. The slatted front facade in corten steel
+                          adds to this aesthetic. As a material choice, corten
+                          steel is a resilient form of steel that ages well.
+                        </div>
+                      </div>
+                      <div class="col-lg-5 col-md-12">
+                        <div class="heading-text-row">
+                          <div class="inner-content">
+                            <div class="content-text">
+                              Coming inside, the &lsquo;Open Plan
+                              Blueprint&rsquo; aims to repackage the familiar
+                              flavour of an independent house with a living area
+                              that opens into a garden.
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div
-                      class="col-lg-6 col-md-12 order-lg-1 order-3 order-md-3"
-                    >
-                      <div class="contact-form-main-content"></div>
+                  </div>
+                  <div class="col-lg-4 col-md-5">
+                    <div class="colored-text">
+                      Recapture the charm of living in an independent house with
+                      a garden.
                     </div>
-                    <div class="col-lg-12 order-lg-1 order-2 order-md-2">
-                      <div class="get-form">
-                        <div
-                          class="wpcf7 no-js"
-                          id="wpcf7-f244-o2"
-                          lang="en-US"
-                          dir="ltr"
-                        >
-                          <div class="screen-reader-response">
-                            <p
-                              role="status"
-                              aria-live="polite"
-                              aria-atomic="true"
-                            ></p>
-                            <ul></ul>
-                          </div>
-                          <div class="btn-wrap" style="display: block">
-                            <a
-                              class="btn btn-orange"
-                              style="background-color: #f6f6f6; display: none;"
-                              href="https://livingwalls.in/wp-content/uploads/2022/06/olde-town-mini-brochure-1.pdf"
-                              target="_blank"
-                              rel="noopener"
-                              id="pdfDownload"
-                            >
-                              Download Brochure
-                            </a>
-                            <div
-                              class="btn btn-orange"
-                              style="background-color: #f6f6f6"
-                              id="pdfDownloadButton"
-                              onclick="openModal()"
-                            >
-                              Download Brochure
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="image-content-layout1">
+            <div class="container">
+              <div class="image-content-wrap">
+                <div class="row">
+                  <div
+                    class="col-xl-5 col-lg-4 col-md-5 col-12 d-none d-lg-block d-md-none"
+                  >
+                    <div class="layout-image">
+                      <img
+                        width="640"
+                        height="493"
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-768x591.jpg"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20493'%3E%3C/svg%3E"
+                        class="attachment-medium_large size-medium_large br-lazy"
+                        data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-768x591.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-300x231.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-1024x788.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-1536x1181.jpg 1536w, https://livingwalls.in/wp-content/uploads/2022/06/designed-for-select-few-2048x1575.jpg 2048w"
+                        data-brsizes="(max-width: 640px) 100vw, 640px"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-7 col-12">
+                    <div class="layout-image layout1-image-small">
+                      <img
+                        width="300"
+                        height="300"
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel-300x300.jpg"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+                        class="attachment-medium size-medium br-lazy"
+                        data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel-300x300.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel-150x150.jpg 150w, https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel-768x768.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/06/Corten-Steel.jpg 805w"
+                        data-brsizes="(max-width: 300px) 100vw, 300px"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-4 col-md-5 col-12">
+                    <div class="layout-content">
+                      <h5>Corten Steel Facade</h5>
+                      <p>
+                        The modern slatted frontage built with Corten Steel will
+                        weather well
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="image-content-layout4">
+            <div class="container">
+              <div class="image-content-wrap">
+                <div class="row">
+                  <div
+                    class="col-xl-3 col-lg-4 col-md-6 col-12 order-2 order-md-2 order-lg-1 offset-xl-5 offset-lg-4"
+                  >
+                    <div class="layout-content">
+                      <h5>Two Basement Levels</h5>
+                      <p>
+                        The building has two basement levels. Each apartment has
+                        two dedicated car parks.
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-4 col-lg-4 col-md-6 col-12 order-1 order-md-2 order-lg-2"
+                  >
+                    <div class="left-plus layout-image">
+                      <img
+                        width="300"
+                        height="201"
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/image-8-300x201.jpg"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20201'%3E%3C/svg%3E"
+                        class="attachment-medium size-medium br-lazy"
+                        data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/image-8-300x201.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/image-8.jpg 640w"
+                        data-brsizes="(max-width: 300px) 100vw, 300px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="image-content-layout5">
+            <div class="container">
+              <div class="image-content-wrap">
+                <div class="row gx-5 gx-md-4 gx-lg-4">
+                  <div class="col-xl-8 col-lg-8 col-md-7 col-12">
+                    <div class="left-plus layout-image">
+                      <img
+                        width="640"
+                        height="227"
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/image-9-768x272.jpg"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20227'%3E%3C/svg%3E"
+                        class="attachment-medium_large size-medium_large br-lazy"
+                        data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/image-9-768x272.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/06/image-9-300x106.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/06/image-9.jpg 848w"
+                        data-brsizes="(max-width: 640px) 100vw, 640px"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-5 col-12">
+                    <div class="layout-content">
+                      <h5>Rooftop swimming pool</h5>
+                      <p>Placed for the best privacy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="image-content-layout2">
+            <div class="container">
+              <div class="image-content-wrap">
+                <div class="row gx-lg-4 gx-md-5 gx-sm-0 gx-0">
+                  <div
+                    class="col-xl-3 col-lg-4 col-md-6 col-12 offset-xl-2 offset-lg-0 order-2 order-md-1 order-lg-1"
+                  >
+                    <div class="layout-content">
+                      <h5>Balcony Gardens</h5>
+                      <p>Your private garden</p>
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-3 col-lg-4 col-md-6 col-12 order-1 order-md-2 order-lg-2"
+                  >
+                    <div class="left-plus layout-image">
+                      <img
+                        width="300"
+                        height="300"
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        data-breeze="https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-300x300.jpg"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20300%20300'%3E%3C/svg%3E"
+                        class="attachment-medium size-medium br-lazy"
+                        data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-300x300.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-1024x1024.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-150x150.jpg 150w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-768x768.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-1536x1536.jpg 1536w, https://livingwalls.in/wp-content/uploads/2022/07/S-08-Panorama-2048x2048.jpg 2048w"
+                        data-brsizes="(max-width: 300px) 100vw, 300px"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="col-xl-4 col-lg-4 col-md-5 col-12 order-2 order-md-2 order-lg-3 d-none d-lg-block d-md-none"
+                  >
+                    <div class="layout-image">
+                      <img
+                        width="640"
+                        height="640"
+                        alt=""
+                        decoding="async"
+                        loading="lazy"
+                        data-breeze="https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-768x768.jpg"
+                        src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20640%20640'%3E%3C/svg%3E"
+                        class="attachment-medium_large size-medium_large br-lazy"
+                        data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-768x768.jpg 768w, https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-300x300.jpg 300w, https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-1024x1024.jpg 1024w, https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama-150x150.jpg 150w, https://livingwalls.in/wp-content/uploads/2022/07/N-010-Panorama.jpg 1400w"
+                        data-brsizes="(max-width: 640px) 100vw, 640px"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- download pdf form -->
+          <section class="download-brochure">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-8 order-lg-1 order-2 order-md-2">
+                  <div class="download-brochure-content">
+                    <div class="row">
+                      <div
+                        class="col-lg-6 col-md-12 order-lg-1 order-1 order-md-1"
+                      >
+                        <div class="contact-form-main-heading">
+                          <h3>
+                            If you are in a hurry, download a PDF Brochure
+                            instead
+                          </h3>
+                        </div>
+                      </div>
+                      <div
+                        class="col-lg-6 col-md-12 order-lg-1 order-3 order-md-3"
+                      >
+                        <div class="contact-form-main-content"></div>
+                      </div>
+                      <div class="col-lg-12 order-lg-1 order-2 order-md-2">
+                        <div class="get-form">
+                          <div
+                            class="wpcf7 no-js"
+                            id="wpcf7-f244-o2"
+                            lang="en-US"
+                            dir="ltr"
+                          >
+                            <div class="screen-reader-response">
+                              <p
+                                role="status"
+                                aria-live="polite"
+                                aria-atomic="true"
+                              ></p>
+                              <ul></ul>
+                            </div>
+                            <div class="btn-wrap" style="display: block">
+                              <a
+                                class="btn btn-orange"
+                                style="background-color: #f6f6f6; display: none"
+                                href="https://livingwalls.in/wp-content/uploads/2022/06/olde-town-mini-brochure-1.pdf"
+                                target="_blank"
+                                rel="noopener"
+                                id="pdfDownload"
+                              >
+                                Download Brochure
+                              </a>
+                              <div
+                                class="btn btn-orange"
+                                style="background-color: #f6f6f6"
+                                id="pdfDownloadButton"
+                                onclick="openModal()"
+                              >
+                                Download Brochure
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -1947,339 +1978,342 @@
                     </div>
                   </div>
                 </div>
-              </div>
-              <div
-                class="col-lg-4 col-md-12 order-1 order-lg-1 order-md-1 order-sm-1 d-block"
-              >
-                <div class="brochure-image">
-                  <img
-                    width="600"
-                    height="479"
-                    alt=""
-                    decoding="async"
-                    loading="lazy"
-                    data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup.png"
-                    src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20479'%3E%3C/svg%3E"
-                    class="attachment-medium_large size-medium_large br-lazy"
-                    data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup.png 600w, https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup-300x240.png 300w"
-                    data-brsizes="(max-width: 600px) 100vw, 600px"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="project-detail-section" style="margin-top: 100px">
-          <div class="container" style="width: 80%">
-            <div class="line-style top-two-line"></div>
-            <div class="project-detail-inner">
-              <div class="row">
-                <div class="col-lg-9 col-md-6">
-                  <div class="top-line pro-detail-box">
-                    <h2>3BHK Open Plan Typical</h2>
-                    <h4><strong>Starting at 3.9Cr</strong></h4>
-                    <h4 class="plan-sft"><em>2458sft</em></h4>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="top-line plan-description">
-                    <p>Open plan living &amp; dining</p>
-                    <p>Balcony Garden</p>
-                    <p>West facing entrance</p>
-                    <p>Open kitchen</p>
-                    <p>Vastu Compliant</p>
+                <div
+                  class="col-lg-4 col-md-12 order-1 order-lg-1 order-md-1 order-sm-1 d-block"
+                >
+                  <div class="brochure-image">
+                    <img
+                      width="600"
+                      height="479"
+                      alt=""
+                      decoding="async"
+                      loading="lazy"
+                      data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup.png"
+                      src="data:image/svg+xml;utf8,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20600%20479'%3E%3C/svg%3E"
+                      class="attachment-medium_large size-medium_large br-lazy"
+                      data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup.png 600w, https://livingwalls.in/wp-content/uploads/2022/06/Brochure_Mockup-300x240.png 300w"
+                      data-brsizes="(max-width: 600px) 100vw, 600px"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section class="detailed-plan-section" style="padding: 0">
-          <div class="container">
-            <div class="project-detail-inner" style="padding: 0">
-              <div class="common-heading d-none d-sm-none d-md-block">
-                <div class="heading-text">
-                  <h2>Detailed floor plan</h2>
-                </div>
-              </div>
+          </section>
+          <section class="project-detail-section" style="margin-top: 100px">
+            <div class="container" style="width: 80%">
               <div class="line-style top-two-line"></div>
-              <div class="detailed-plan-wrap">
-                <div class="detailed-plan-inner my-detailed-plan-inner">
-                  <div class="row">
-                    <div class="col-lg-9 col-md-8 col-12">
-                      <div class="detailed-plan-box">
-                        <img
-                          width="2481"
-                          height="3508"
-                          alt=""
-                          decoding="async"
-                          loading="lazy"
-                          data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png"
-                          src="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png"
-                          class="attachment-full size-full br-loaded"
-                          data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1448x2048.png 1448w"
-                          data-brsizes="(max-width: 2481px) 100vw, 2481px"
-                          sizes="(max-width: 2481px) 100vw, 2481px"
-                          srcset="
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png           2481w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-212x300.png    212w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-724x1024.png   724w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-768x1086.png   768w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1086x1536.png 1086w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1448x2048.png 1448w
-                          "
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-12">
-                      <div class="detailed-plan-right my-detailed-plan-right">
-                        <div class="map-icon">
-                          <img
-                            width="64"
-                            height="64"
-                            alt=""
-                            decoding="async"
-                            loading="lazy"
-                            data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
-                            src="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
-                            class="attachment-full size-full ls-is-cached br-loaded"
-                          />
-                        </div>
-                        <div class="plan-btn-group"></div>
-                        <div class="bottom-plan-detail">
-                          3BHK Open Plan<br />2458 sqft<br />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="project-detail-section" style="margin-top: 100px">
-          <div class="container" style="width: 80%">
-            <div class="line-style top-two-line"></div>
-            <div class="project-detail-inner">
-              <div class="row">
-                <div class="col-lg-9 col-md-6">
-                  <div class="top-line pro-detail-box">
-                    <h2>3BHK Semi Open Plan Typical</h2>
-                    <h4><strong>Starting at 4.4Cr</strong></h4>
-                    <h4 class="plan-sft"><em>2823sft</em></h4>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="top-line plan-description">
-                    <p>Semi-Open plan living &amp; dining</p>
-                    <p>Balcony Garden</p>
-                    <p>North facing entrance</p>
-                    <p>Closed kitchen</p>
-                    <p>Vastu Compliant</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="detailed-plan-section" style="padding: 0">
-          <div class="container">
-            <div class="project-detail-inner" style="padding: 0">
-              <div class="common-heading d-none d-sm-none d-md-block">
-                <div class="heading-text">
-                  <h2>Detailed floor plan</h2>
-                </div>
-              </div>
-              <div class="line-style top-two-line"></div>
-              <div class="detailed-plan-wrap">
-                <div class="detailed-plan-inner my-detailed-plan-inner">
-                  <div class="row">
-                    <div class="col-lg-9 col-md-8 col-12">
-                      <div class="detailed-plan-box">
-                        <img
-                          width="2481"
-                          height="3508"
-                          alt=""
-                          decoding="async"
-                          loading="lazy"
-                          data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png"
-                          src="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png"
-                          class="attachment-full size-full br-loaded"
-                          data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1448x2048.png 1448w"
-                          data-brsizes="(max-width: 2481px) 100vw, 2481px"
-                          sizes="(max-width: 2481px) 100vw, 2481px"
-                          srcset="
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png           2481w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-212x300.png    212w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-724x1024.png   724w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-768x1086.png   768w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1086x1536.png 1086w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1448x2048.png 1448w
-                          "
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-12">
-                      <div class="detailed-plan-right my-detailed-plan-right">
-                        <div class="map-icon">
-                          <img
-                            width="64"
-                            height="64"
-                            alt=""
-                            decoding="async"
-                            loading="lazy"
-                            data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
-                            src="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
-                            class="attachment-full size-full ls-is-cached br-loaded"
-                          />
-                        </div>
-                        <div class="plan-btn-group"></div>
-                        <div class="bottom-plan-detail">
-                          3BHK Semi Open Plan<br />2823 sqft<br />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="project-detail-section" style="margin-top: 100px">
-          <div class="container" style="width: 80%">
-            <div class="line-style top-two-line"></div>
-            <div class="project-detail-inner">
-              <div class="row">
-                <div class="col-lg-9 col-md-6">
-                  <div class="top-line pro-detail-box">
-                    <h2>3BHK Duplex Typical</h2>
-                    <h4><strong>Starting at 3.9Cr</strong></h4>
-                    <h4 class="plan-sft"><em>2500sft</em></h4>
-                  </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                  <div class="top-line plan-description">
-                    <p>Open plan living &amp; dining</p>
-                    <p>Double height glazed window</p>
-                    <p>East facing entrance</p>
-                    <p>Vastu Compliant</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="detailed-plan-section" style="padding: 0">
-          <div class="container">
-            <div class="project-detail-inner" style="padding: 0">
-              <div class="common-heading d-none d-sm-none d-md-block">
-                <div class="heading-text">
-                  <h2>Detailed floor plan</h2>
-                </div>
-              </div>
-              <div class="line-style top-two-line"></div>
-              <div class="detailed-plan-wrap">
-                <div class="detailed-plan-inner my-detailed-plan-inner">
-                  <div class="row">
-                    <div class="col-lg-9 col-md-8 col-12">
-                      <div class="detailed-plan-box">
-                        <img
-                          width="2481"
-                          height="5433"
-                          alt=""
-                          decoding="async"
-                          loading="lazy"
-                          data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png"
-                          src="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png"
-                          class="attachment-full size-full ls-is-cached br-loaded"
-                          data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-137x300.png 137w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-468x1024.png 468w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-768x1682.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-701x1536.png 701w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-935x2048.png 935w"
-                          data-brsizes="(max-width: 2481px) 100vw, 2481px"
-                          sizes="(max-width: 2481px) 100vw, 2481px"
-                          srcset="
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png          2481w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-137x300.png   137w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-468x1024.png  468w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-768x1682.png  768w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-701x1536.png  701w,
-                            https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-935x2048.png  935w
-                          "
-                        />
-                      </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-12">
-                      <div class="detailed-plan-right my-detailed-plan-right">
-                        <div class="map-icon">
-                          <img
-                            width="64"
-                            height="64"
-                            alt=""
-                            decoding="async"
-                            loading="lazy"
-                            data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
-                            src="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
-                            class="attachment-full size-full ls-is-cached br-loaded"
-                          />
-                        </div>
-                        <div class="plan-btn-group"></div>
-                        <div class="bottom-plan-detail">
-                          3BHK Duplex<br />2500 sqft<br />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="amenities-facilities-section">
-          <div class="container">
-            <div class="amenities-container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="amenities-main-heading">
-                    Amenities and Facilities
-                  </div>
-                </div>
-              </div>
-              <div class="amenities-wrap">
+              <div class="project-detail-inner">
                 <div class="row">
-                  <div class="col-lg-4 col-md-4 col-12">
-                    <div class="amenities-content">
-                      <h5>Amenities</h5>
-                      <ul>
-                        <li>Roof Top Swimming Pool</li>
-                        <li>Gym</li>
-                        <li>Covered Party Area</li>
-                        <li>Optional Work Pods</li>
-                        <li>Party Hall</li>
-                      </ul>
+                  <div class="col-lg-9 col-md-6">
+                    <div class="top-line pro-detail-box">
+                      <h2>3BHK Open Plan Typical</h2>
+                      <h4><strong>Starting at 3.9Cr</strong></h4>
+                      <h4 class="plan-sft"><em>2458sft</em></h4>
                     </div>
                   </div>
-
-                  <div class="col-lg-8 col-md-8 col-12">
-                    <div class="amenities-content facilities-text">
-                      <h5>Facilities</h5>
-                      <ul>
-                        <li>Double Basements</li>
-                        <li>Sewage Treatment Plant</li>
-                        <li>Water Treatment Plant</li>
-                        <li>EV Ready Parking Bays</li>
-                        <li>Common Lift Lobby</li>
-                        <li>Power Backup DGs</li>
-                        <li>Access Control Lifts</li>
-                        <li>Drip Irrigated Landscaped Areas</li>
-                        <li>Optional Stacked Parking Equipment</li>
-                        <li>Automatic Lights in the Basement</li>
-                        <li>Solar Powered Common Area Lighting</li>
-                      </ul>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="top-line plan-description">
+                      <p>Open plan living &amp; dining</p>
+                      <p>Balcony Garden</p>
+                      <p>West facing entrance</p>
+                      <p>Open kitchen</p>
+                      <p>Vastu Compliant</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+          <section class="detailed-plan-section" style="padding: 0">
+            <div class="container">
+              <div class="project-detail-inner" style="padding: 0">
+                <div class="common-heading d-none d-sm-none d-md-block">
+                  <div class="heading-text">
+                    <h2>Detailed floor plan</h2>
+                  </div>
+                </div>
+                <div class="line-style top-two-line"></div>
+                <div class="detailed-plan-wrap">
+                  <div class="detailed-plan-inner my-detailed-plan-inner">
+                    <div class="row">
+                      <div class="col-lg-9 col-md-8 col-12">
+                        <div class="detailed-plan-box">
+                          <img
+                            width="2481"
+                            style="height: 105%"
+                            alt=""
+                            decoding="async"
+                            loading="lazy"
+                            data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png"
+                            src="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png"
+                            class="attachment-full size-full br-loaded"
+                            data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1448x2048.png 1448w"
+                            data-brsizes="(max-width: 2481px) 100vw, 2481px"
+                            sizes="(max-width: 2481px) 100vw, 2481px"
+                            srcset="
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North.png           2481w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-212x300.png    212w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-724x1024.png   724w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-768x1086.png   768w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1086x1536.png 1086w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-023_3BHK_North-1448x2048.png 1448w
+                            "
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-12">
+                        <div class="detailed-plan-right my-detailed-plan-right">
+                          <div class="map-icon">
+                            <img
+                              width="64"
+                              height="64"
+                              alt=""
+                              decoding="async"
+                              loading="lazy"
+                              data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
+                              src="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
+                              class="attachment-full size-full ls-is-cached br-loaded"
+                            />
+                          </div>
+                          <div class="plan-btn-group"></div>
+                          <div class="bottom-plan-detail">
+                            3BHK Open Plan<br />2458 sqft<br />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="project-detail-section" style="margin-top: 100px">
+            <div class="container" style="width: 80%">
+              <div class="line-style top-two-line"></div>
+              <div class="project-detail-inner">
+                <div class="row">
+                  <div class="col-lg-9 col-md-6">
+                    <div class="top-line pro-detail-box">
+                      <h2>3BHK Semi Open Plan Typical</h2>
+                      <h4><strong>Starting at 4.4Cr</strong></h4>
+                      <h4 class="plan-sft"><em>2823sft</em></h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="top-line plan-description">
+                      <p>Semi-Open plan living &amp; dining</p>
+                      <p>Balcony Garden</p>
+                      <p>North facing entrance</p>
+                      <p>Closed kitchen</p>
+                      <p>Vastu Compliant</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="detailed-plan-section" style="padding: 0">
+            <div class="container">
+              <div class="project-detail-inner" style="padding: 0">
+                <div class="common-heading d-none d-sm-none d-md-block">
+                  <div class="heading-text">
+                    <h2>Detailed floor plan</h2>
+                  </div>
+                </div>
+                <div class="line-style top-two-line"></div>
+                <div class="detailed-plan-wrap">
+                  <div class="detailed-plan-inner my-detailed-plan-inner">
+                    <div class="row">
+                      <div class="col-lg-9 col-md-8 col-12">
+                        <div class="detailed-plan-box">
+                          <img
+                            width="2481"
+                            style="height: 105%"
+                            alt=""
+                            decoding="async"
+                            loading="lazy"
+                            data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png"
+                            src="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png"
+                            class="attachment-full size-full br-loaded"
+                            data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-212x300.png 212w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-724x1024.png 724w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-768x1086.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1086x1536.png 1086w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1448x2048.png 1448w"
+                            data-brsizes="(max-width: 2481px) 100vw, 2481px"
+                            sizes="(max-width: 2481px) 100vw, 2481px"
+                            srcset="
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South.png           2481w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-212x300.png    212w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-724x1024.png   724w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-768x1086.png   768w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1086x1536.png 1086w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-021_3BHK_South-1448x2048.png 1448w
+                            "
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-12">
+                        <div class="detailed-plan-right my-detailed-plan-right">
+                          <div class="map-icon">
+                            <img
+                              width="64"
+                              height="64"
+                              alt=""
+                              decoding="async"
+                              loading="lazy"
+                              data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
+                              src="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
+                              class="attachment-full size-full ls-is-cached br-loaded"
+                            />
+                          </div>
+                          <div class="plan-btn-group"></div>
+                          <div class="bottom-plan-detail">
+                            3BHK Semi Open Plan<br />2823 sqft<br />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="project-detail-section" style="margin-top: 100px">
+            <div class="container" style="width: 80%">
+              <div class="line-style top-two-line"></div>
+              <div class="project-detail-inner">
+                <div class="row">
+                  <div class="col-lg-9 col-md-6">
+                    <div class="top-line pro-detail-box">
+                      <h2>3BHK Duplex Typical</h2>
+                      <h4><strong>Starting at 3.9Cr</strong></h4>
+                      <h4 class="plan-sft"><em>2500sft</em></h4>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6">
+                    <div class="top-line plan-description">
+                      <p>Open plan living &amp; dining</p>
+                      <p>Double height glazed window</p>
+                      <p>East facing entrance</p>
+                      <p>Vastu Compliant</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="detailed-plan-section" style="padding: 0">
+            <div class="container">
+              <div class="project-detail-inner" style="padding: 0">
+                <div class="common-heading d-none d-sm-none d-md-block">
+                  <div class="heading-text">
+                    <h2>Detailed floor plan</h2>
+                  </div>
+                </div>
+                <div class="line-style top-two-line"></div>
+                <div class="detailed-plan-wrap">
+                  <div class="detailed-plan-inner my-detailed-plan-inner">
+                    <div class="row">
+                      <div class="col-lg-9 col-md-8 col-12">
+                        <div
+                          class="detailed-plan-box"
+                          style="height: fit-content"
+                        >
+                          <img
+                            width="2481"
+                            style="height: 90%"
+                            alt=""
+                            decoding="async"
+                            loading="lazy"
+                            data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png"
+                            src="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png"
+                            class="attachment-full size-full ls-is-cached br-loaded"
+                            data-brsrcset="https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png 2481w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-137x300.png 137w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-468x1024.png 468w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-768x1682.png 768w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-701x1536.png 701w, https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-935x2048.png 935w"
+                            data-brsizes="(max-width: 2481px) 100vw, 2481px"
+                            sizes="(max-width: 2481px) 100vw, 2481px"
+                            srcset="
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1.png          2481w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-137x300.png   137w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-468x1024.png  468w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-768x1682.png  768w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-701x1536.png  701w,
+                              https://livingwalls.in/wp-content/uploads/2022/06/LW_OT-022_3BHK_Duplex_full-1-935x2048.png  935w
+                            "
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-3 col-md-4 col-12">
+                        <div class="detailed-plan-right my-detailed-plan-right">
+                          <div class="map-icon">
+                            <img
+                              width="64"
+                              height="64"
+                              alt=""
+                              decoding="async"
+                              loading="lazy"
+                              data-breeze="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
+                              src="https://livingwalls.in/wp-content/uploads/2022/06/compass.svg"
+                              class="attachment-full size-full ls-is-cached br-loaded"
+                            />
+                          </div>
+                          <div class="plan-btn-group"></div>
+                          <div class="bottom-plan-detail">
+                            3BHK Duplex<br />2500 sqft<br />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="amenities-facilities-section">
+            <div class="container">
+              <div class="amenities-container">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="amenities-main-heading">
+                      Amenities and Facilities
+                    </div>
+                  </div>
+                </div>
+                <div class="amenities-wrap">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-12">
+                      <div class="amenities-content">
+                        <h5>Amenities</h5>
+                        <ul>
+                          <li>Roof Top Swimming Pool</li>
+                          <li>Gym</li>
+                          <li>Covered Party Area</li>
+                          <li>Optional Work Pods</li>
+                          <li>Party Hall</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-8 col-md-8 col-12">
+                      <div class="amenities-content facilities-text">
+                        <h5>Facilities</h5>
+                        <ul>
+                          <li>Double Basements</li>
+                          <li>Sewage Treatment Plant</li>
+                          <li>Water Treatment Plant</li>
+                          <li>EV Ready Parking Bays</li>
+                          <li>Common Lift Lobby</li>
+                          <li>Power Backup DGs</li>
+                          <li>Access Control Lifts</li>
+                          <li>Drip Irrigated Landscaped Areas</li>
+                          <li>Optional Stacked Parking Equipment</li>
+                          <li>Automatic Lights in the Basement</li>
+                          <li>Solar Powered Common Area Lighting</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
       <!-- #main -->
       <!-- #Content part end-->
@@ -2328,8 +2362,12 @@
               <div class="checkboxWrapper">
                 <input type="checkbox" checked="checked" />
                 <p class="readLess" id="readTwo">
-                  <span class="smallFont">I hearby declare that I have read the consent...</span>
-                  <span class="smallFont" id="readLess" onclick="readMoretwo()">Read More</span>
+                  <span class="smallFont"
+                    >I hearby declare that I have read the consent...</span
+                  >
+                  <span class="smallFont" id="readLess" onclick="readMoretwo()"
+                    >Read More</span
+                  >
                 </p>
                 <div style="margin-top: -4px">
                   <span class="readMore smallFont" id="displayMoreTwo">
@@ -2341,7 +2379,9 @@
                     contained anywhere, including any registration for DNC/
                     NDNC.
                   </span>
-                  <span class="smallFont" id="readLess1" onclick="readLess()">Read Less</span>
+                  <span class="smallFont" id="readLess1" onclick="readLess()"
+                    >Read Less</span
+                  >
                 </div>
               </div>
               <button
